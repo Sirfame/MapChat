@@ -5,7 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
-        <!--Item-->
+        <!--Settings-->
         <scene sceneID="CRd-eZ-xlh">
             <objects>
                 <viewController id="CtY-RI-kkh" sceneMemberID="viewController">
@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.99607843137254903" green="0.59215686274509804" blue="0.6705882352941176" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="bgT-Fc-EGP"/>
+                    <tabBarItem key="tabBarItem" title="Settings" id="bgT-Fc-EGP"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
@@ -27,7 +27,7 @@
             </objects>
             <point key="canvasLocation" x="878" y="1333"/>
         </scene>
-        <!--Item 2-->
+        <!--Chat-->
         <scene sceneID="LL4-XW-7mA">
             <objects>
                 <viewController id="k2Z-lM-Trt" sceneMemberID="viewController">
@@ -40,13 +40,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="0.99215686274509807" blue="0.58039215686274515" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="TSD-Cx-4eD"/>
+                    <tabBarItem key="tabBarItem" title="Chat" id="TSD-Cx-4eD"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wxD-sp-1wq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="878" y="518"/>
         </scene>
-        <!--Item 1-->
+        <!--Map-->
         <scene sceneID="nKd-rS-A3b">
             <objects>
                 <viewController id="WyY-7L-Rqm" sceneMemberID="viewController">
@@ -59,7 +59,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.61568627450980395" green="0.58823529411764708" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="Wew-JD-XTG"/>
+                    <tabBarItem key="tabBarItem" title="Map" id="Wew-JD-XTG"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                 </viewController>
