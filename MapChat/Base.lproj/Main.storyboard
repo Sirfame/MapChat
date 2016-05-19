@@ -8,7 +8,7 @@
         <!--Settings-->
         <scene sceneID="CRd-eZ-xlh">
             <objects>
-                <viewController id="CtY-RI-kkh" sceneMemberID="viewController">
+                <viewController title="Settings" id="CtY-RI-kkh" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="cz8-tv-gl9"/>
                         <viewControllerLayoutGuide type="bottom" id="cX6-Wv-Iwa"/>
@@ -27,10 +27,10 @@
             </objects>
             <point key="canvasLocation" x="878" y="1333"/>
         </scene>
-        <!--Chat-->
+        <!--Chat Menu-->
         <scene sceneID="LL4-XW-7mA">
             <objects>
-                <viewController id="k2Z-lM-Trt" sceneMemberID="viewController">
+                <viewController title="Chat Menu" id="k2Z-lM-Trt" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Zib-7f-dEC"/>
                         <viewControllerLayoutGuide type="bottom" id="q9N-kA-uqf"/>
@@ -38,6 +38,19 @@
                     <view key="view" contentMode="scaleToFill" id="xqD-NE-LRe">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="52k-51-ytZ">
+                                <rect key="frame" x="129" y="329" width="157" height="30"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="15"/>
+                                <state key="normal" title="press here pls">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="XEl-YC-Fdx" kind="show" id="cBC-N2-fWH"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="0.99215686274509807" blue="0.58039215686274515" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Chat" id="TSD-Cx-4eD"/>
@@ -49,13 +62,13 @@
         <!--Map-->
         <scene sceneID="nKd-rS-A3b">
             <objects>
-                <viewController id="WyY-7L-Rqm" sceneMemberID="viewController">
+                <viewController title="Map" id="WyY-7L-Rqm" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="vft-Mi-DIu"/>
                         <viewControllerLayoutGuide type="bottom" id="FIV-Tz-oEH"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="uRA-W6-RnU">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="687"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.61568627450980395" green="0.58823529411764708" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
@@ -67,16 +80,49 @@
             </objects>
             <point key="canvasLocation" x="878" y="-273"/>
         </scene>
+        <!--Chat-->
+        <scene sceneID="9jr-Vk-9As">
+            <objects>
+                <viewController title="Chat" id="XEl-YC-Fdx" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="66y-Lh-kR0"/>
+                        <viewControllerLayoutGuide type="bottom" id="IGM-Os-n6Q"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="rpR-qO-34B">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vcG-rU-UPg">
+                                <rect key="frame" x="144" y="329" width="126" height="30"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="15"/>
+                                <state key="normal" title="jk go back"/>
+                                <connections>
+                                    <segue destination="k2Z-lM-Trt" kind="show" id="qYY-C0-c69"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.55686274509803924" green="1" blue="0.5725490196078431" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Y5d-VH-BT7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1363" y="518"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Dtv-0o-R4l">
             <objects>
                 <tabBarController id="OGi-rt-BSq" sceneMemberID="viewController">
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" id="Fzj-Pc-9KQ">
+                    <tabBar key="tabBar" contentMode="scaleToFill" translucent="NO" id="Fzj-Pc-9KQ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="selectedImageTintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
                         <segue destination="WyY-7L-Rqm" kind="relationship" relationship="viewControllers" id="HIp-gn-zgk"/>
@@ -89,4 +135,8 @@
             <point key="canvasLocation" x="58" y="115"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="qYY-C0-c69"/>
+    </inferredMetricsTieBreakers>
+    <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
 </document>
