@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="OGi-rt-BSq">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="OGi-rt-BSq">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -70,15 +70,20 @@
                     <view key="view" contentMode="scaleToFill" id="uRA-W6-RnU">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="687"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="g2f-LV-rzU">
+                                <rect key="frame" x="20" y="84" width="374" height="374"/>
+                            </mapView>
+                        </subviews>
                         <color key="backgroundColor" red="0.61568627450980395" green="0.58823529411764708" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Map" id="Wew-JD-XTG"/>
+                    <navigationItem key="navigationItem" id="x0N-u2-TpN"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gb9-yR-elD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="878" y="-273"/>
+            <point key="canvasLocation" x="1504" y="-273"/>
         </scene>
         <!--Chat-->
         <scene sceneID="9jr-Vk-9As">
@@ -125,7 +130,7 @@
                         <color key="selectedImageTintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="WyY-7L-Rqm" kind="relationship" relationship="viewControllers" id="HIp-gn-zgk"/>
+                        <segue destination="sAi-W5-mch" kind="relationship" relationship="viewControllers" id="HIp-gn-zgk"/>
                         <segue destination="k2Z-lM-Trt" kind="relationship" relationship="viewControllers" id="UIy-Wl-BPa"/>
                         <segue destination="CtY-RI-kkh" kind="relationship" relationship="viewControllers" id="KhH-0c-KhH"/>
                     </connections>
@@ -133,6 +138,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5d0-hF-GQe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="58" y="115"/>
+        </scene>
+        <!--Map-->
+        <scene sceneID="HVC-qO-dJG">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="sAi-W5-mch" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Map" id="Wew-JD-XTG"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="zba-iL-t8S">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="WyY-7L-Rqm" kind="relationship" relationship="rootViewController" id="T71-Ii-Psf"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Aco-6L-GcT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="878" y="-273"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>

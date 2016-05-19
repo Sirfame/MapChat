@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9DC9577D1CEE78330086B700 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DC9577C1CEE78330086B700 /* MapKit.framework */; };
 		C5D5402D1CED84E5008A0A2C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5D5402C1CED84E5008A0A2C /* AppDelegate.swift */; };
 		C5D5402F1CED84E5008A0A2C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5D5402E1CED84E5008A0A2C /* ViewController.swift */; };
 		C5D540321CED84E5008A0A2C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5D540301CED84E5008A0A2C /* Main.storyboard */; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9DC9577C1CEE78330086B700 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		C5D540291CED84E5008A0A2C /* MapChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MapChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5D5402C1CED84E5008A0A2C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C5D5402E1CED84E5008A0A2C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -54,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9DC9577D1CEE78330086B700 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,6 +80,7 @@
 		C5D540201CED84E5008A0A2C = {
 			isa = PBXGroup;
 			children = (
+				9DC9577C1CEE78330086B700 /* MapKit.framework */,
 				C5D5402B1CED84E5008A0A2C /* MapChat */,
 				C5D540401CED84E5008A0A2C /* MapChatTests */,
 				C5D5404B1CED84E5008A0A2C /* MapChatUITests */,
@@ -482,6 +486,7 @@
 				C5D540531CED84E5008A0A2C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C5D540541CED84E5008A0A2C /* Build configuration list for PBXNativeTarget "MapChatTests" */ = {
 			isa = XCConfigurationList;
@@ -490,6 +495,7 @@
 				C5D540561CED84E5008A0A2C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C5D540571CED84E5008A0A2C /* Build configuration list for PBXNativeTarget "MapChatUITests" */ = {
 			isa = XCConfigurationList;
@@ -498,6 +504,7 @@
 				C5D540591CED84E5008A0A2C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
