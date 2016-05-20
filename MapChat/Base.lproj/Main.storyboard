@@ -81,7 +81,7 @@
         <!--Map-->
         <scene sceneID="nKd-rS-A3b">
             <objects>
-                <viewController title="Map" id="WyY-7L-Rqm" sceneMemberID="viewController">
+                <viewController title="Map" id="WyY-7L-Rqm" customClass="ViewController" customModule="MapChat" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="vft-Mi-DIu"/>
                         <viewControllerLayoutGuide type="bottom" id="FIV-Tz-oEH"/>
@@ -93,6 +93,10 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="g2f-LV-rzU">
                                 <rect key="frame" x="20" y="84" width="374" height="478"/>
                             </mapView>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="kdP-D7-Tym">
+                                <rect key="frame" x="18" y="587" width="378" height="31"/>
+                                <color key="tintColor" red="0.54509803921568623" green="0.49411764705882355" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </slider>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EmB-Lo-oZp">
                                 <rect key="frame" x="161" y="637" width="93" height="30"/>
                                 <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="23"/>
@@ -100,16 +104,23 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                             </button>
-                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="kdP-D7-Tym">
-                                <rect key="frame" x="18" y="587" width="378" height="31"/>
-                                <color key="tintColor" red="0.54509803921568623" green="0.49411764705882355" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ps8-v6-QSH">
+                                <rect key="frame" x="383" y="625" width="11" height="21"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="17"/>
+                                <color key="textColor" red="0.33749944656755532" green="0.31029190363307474" blue="0.63316017670157065" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.61568627450980395" green="0.58823529411764708" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="x0N-u2-TpN"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <connections>
+                        <outlet property="bttnGo" destination="EmB-Lo-oZp" id="u5R-CW-y7G"/>
+                        <outlet property="lblRadius" destination="ps8-v6-QSH" id="51g-y2-aHd"/>
+                        <outlet property="sliderRadiusSlider" destination="kdP-D7-Tym" id="Un8-cF-ayV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gb9-yR-elD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
