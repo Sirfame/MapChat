@@ -6,7 +6,12 @@ target 'MapChat' do
   use_frameworks!
 
   # Pods for MapChat
-pod 'Firebase'
+pod 'Firebase', '~> 2.1'
+
+use_frameworks!
+
+pod 'GeoFire', '>= 1.1'
+
   target 'MapChatTests' do
     inherit! :search_paths
     # Pods for testing

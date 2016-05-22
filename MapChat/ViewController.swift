@@ -7,6 +7,9 @@
 //
 
 import UIKit
+import Foundation
+import Firebase
+import GeoFire
 
 class ViewController: UIViewController {
     
@@ -28,6 +31,12 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        NSLog("view loaded")
+        
+        let geofireRef = Firebase(url: "https://mapchat-2d278.firebaseio.com/")
+        let geoFire = GeoFire(firebaseRef: geofireRef)
+        
+        geoFire.setLocation(CLLocation(latitude: 37.7853889, longitude: -122.4056973), forKey: "firebase-test")
         // Do any additional setup after loading the view, typically from a nib.
     }
 
