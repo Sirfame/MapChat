@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  MapChat
 //
-//  Created by Joel Elizaga on 5/18/16.
+//  Created by Favs on 5/18/16.
 //  Copyright © 2016 Neward's Favs. All rights reserved.
 //
 

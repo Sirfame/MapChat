@@ -13,6 +13,8 @@ import GeoFire
 
 class ViewController: UIViewController {
     
+    let tableData = ["One","Two","Three"]
+    
     ///////////////////////////////////////////////////////////////////////////////////////////////
     // IBOutlets //////////////////////////////////////////////////////////////////////////////////
     ///////////////////////////////////////////////////////////////////////////////////////////////
@@ -37,7 +39,8 @@ class ViewController: UIViewController {
         let geoFire = GeoFire(firebaseRef: geofireRef)
         
         geoFire.setLocation(CLLocation(latitude: 37.7853889, longitude: -122.4056973), forKey: "firebase-test")
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
