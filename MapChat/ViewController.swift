@@ -43,6 +43,10 @@ class ViewController: UIViewController {
     // MAP SCENE: bttnGoPressed - Action that occurs when bttnGo is pressed.
     @IBAction func bttnGoPressed(sender: UIButton) {
         
+        let alertController = UIAlertController(title: "WHAT HAVE YOU DONE??", message: "YOU'VE DOOMED US ALL!!", preferredStyle: UIAlertControllerStyle.Alert)
+        alertController.addAction(UIAlertAction(title: "Okay", style: UIAlertActionStyle.Default, handler: nil))
+        self.presentViewController(alertController, animated: true, completion: nil)
+        
     }
     
     ///////////////////////////////////////////////////////////////////////////////////////////////
