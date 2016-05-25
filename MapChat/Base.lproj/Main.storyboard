@@ -126,10 +126,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="g2f-LV-rzU">
-                                <rect key="frame" x="20" y="84" width="374" height="478"/>
+                                <rect key="frame" x="20" y="84" width="374" height="462"/>
                             </mapView>
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="kdP-D7-Tym">
-                                <rect key="frame" x="18" y="587" width="378" height="31"/>
+                                <rect key="frame" x="18" y="567" width="378" height="31"/>
                                 <color key="tintColor" red="0.54509803921568623" green="0.49411764705882355" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <action selector="sliderRadiusSliderChanged:" destination="WyY-7L-Rqm" eventType="valueChanged" id="i1r-t6-at8"/>
@@ -145,9 +145,9 @@
                                     <action selector="bttnGoPressed:" destination="WyY-7L-Rqm" eventType="touchUpInside" id="Omi-7c-7gE"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ps8-v6-QSH">
-                                <rect key="frame" x="373" y="625" width="21" height="21"/>
-                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="I want to talk to people within 2 miles." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ps8-v6-QSH">
+                                <rect key="frame" x="20" y="608" width="374" height="21"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="14"/>
                                 <color key="textColor" red="0.33749944656755532" green="0.31029190363307474" blue="0.63316017670157065" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>

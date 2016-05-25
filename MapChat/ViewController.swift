@@ -28,7 +28,7 @@ class ViewController: UIViewController {
     @IBAction func sliderRadiusSliderChanged(sender: UISlider) {
         
         let currentValue = Int(sender.value)
-        lblRadius.text = "\(currentValue)"
+        lblRadius.text = "I want to talk to people within \(currentValue) miles."
         
     }
     
