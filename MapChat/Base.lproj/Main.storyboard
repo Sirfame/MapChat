@@ -18,14 +18,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="2qy-ur-cNu"/>
+                    <tabBarItem key="tabBarItem" title="Settings" id="2qy-ur-cNu"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8bu-0j-jhf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="878" y="1317"/>
+            <point key="canvasLocation" x="280" y="937"/>
         </scene>
         <!--Chat Menu-->
         <scene sceneID="LL4-XW-7mA">
@@ -183,6 +183,7 @@
                     <connections>
                         <segue destination="sAi-W5-mch" kind="relationship" relationship="viewControllers" id="HIp-gn-zgk"/>
                         <segue destination="k2Z-lM-Trt" kind="relationship" relationship="viewControllers" id="UIy-Wl-BPa"/>
+                        <segue destination="DPW-6b-zCd" kind="relationship" relationship="viewControllers" id="CJo-49-f2q"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5d0-hF-GQe" userLabel="First Responder" sceneMemberID="firstResponder"/>
