@@ -18,6 +18,7 @@
 		9DE8077F1CF51E0900FE3222 /* OngoingChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE8077E1CF51E0900FE3222 /* OngoingChatTableViewCell.swift */; };
 		9DE807811CF51E4000FE3222 /* ChatBubbleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE807801CF51E4000FE3222 /* ChatBubbleTableViewCell.swift */; };
 		9DE807831CF51E7600FE3222 /* SettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE807821CF51E7600FE3222 /* SettingsTableViewCell.swift */; };
+		9DE807851CF5251D00FE3222 /* ChatMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE807841CF5251D00FE3222 /* ChatMenuTableViewController.swift */; };
 		C5D5402D1CED84E5008A0A2C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5D5402C1CED84E5008A0A2C /* AppDelegate.swift */; };
 		C5D5402F1CED84E5008A0A2C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5D5402E1CED84E5008A0A2C /* ViewController.swift */; };
 		C5D540321CED84E5008A0A2C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5D540301CED84E5008A0A2C /* Main.storyboard */; };
@@ -59,6 +60,7 @@
 		9DE8077E1CF51E0900FE3222 /* OngoingChatTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OngoingChatTableViewCell.swift; sourceTree = "<group>"; };
 		9DE807801CF51E4000FE3222 /* ChatBubbleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatBubbleTableViewCell.swift; sourceTree = "<group>"; };
 		9DE807821CF51E7600FE3222 /* SettingsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTableViewCell.swift; sourceTree = "<group>"; };
+		9DE807841CF5251D00FE3222 /* ChatMenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatMenuTableViewController.swift; sourceTree = "<group>"; };
 		AB26D9F16A3974DBA2716CB6 /* Pods-MapChatUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MapChatUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MapChatUITests/Pods-MapChatUITests.release.xcconfig"; sourceTree = "<group>"; };
 		B510C394ABE9858847B3590C /* Pods-MapChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MapChat.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MapChat/Pods-MapChat.debug.xcconfig"; sourceTree = "<group>"; };
 		C5D540291CED84E5008A0A2C /* MapChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MapChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -162,6 +164,7 @@
 				9D80B22C1CEE891900A768C0 /* GoogleService-Info.plist */,
 				C5D5402C1CED84E5008A0A2C /* AppDelegate.swift */,
 				C5D5402E1CED84E5008A0A2C /* ViewController.swift */,
+				9DE807841CF5251D00FE3222 /* ChatMenuTableViewController.swift */,
 				C5D540301CED84E5008A0A2C /* Main.storyboard */,
 				9DE8077E1CF51E0900FE3222 /* OngoingChatTableViewCell.swift */,
 				9DE807801CF51E4000FE3222 /* ChatBubbleTableViewCell.swift */,
@@ -456,6 +459,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9DE807851CF5251D00FE3222 /* ChatMenuTableViewController.swift in Sources */,
 				C5D5402F1CED84E5008A0A2C /* ViewController.swift in Sources */,
 				9DE8077F1CF51E0900FE3222 /* OngoingChatTableViewCell.swift in Sources */,
 				C5D5402D1CED84E5008A0A2C /* AppDelegate.swift in Sources */,
