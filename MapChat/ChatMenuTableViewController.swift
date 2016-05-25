@@ -2,7 +2,7 @@
 //  ChatMenuTableViewController.swift
 //  MapChat
 //
-//  Created by Yolo Swaggins on 5/24/16.
+//  Created by Ted Neward on 5/24/16.
 //  Copyright © 2016 Neward's Favs. All rights reserved.
 //
 

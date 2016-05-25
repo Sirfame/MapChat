@@ -131,6 +131,9 @@
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="kdP-D7-Tym">
                                 <rect key="frame" x="18" y="587" width="378" height="31"/>
                                 <color key="tintColor" red="0.54509803921568623" green="0.49411764705882355" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="sliderRadiusSliderChanged:" destination="WyY-7L-Rqm" eventType="valueChanged" id="i1r-t6-at8"/>
+                                </connections>
                             </slider>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EmB-Lo-oZp">
                                 <rect key="frame" x="161" y="637" width="93" height="30"/>

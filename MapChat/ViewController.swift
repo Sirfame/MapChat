@@ -23,6 +23,11 @@ class ViewController: UIViewController {
         // prospective chatters.
         @IBOutlet weak var sliderRadiusSlider: UISlider!
     
+        // MAP SCENE: sliderRadiusSliderChanged - Action that occurs when sliderRadiusSlider is
+        // slid.
+        @IBAction func sliderRadiusSliderChanged(sender: AnyObject) {
+        }
+    
         // MAP SCENE: lblRadius - Label beneath the slider indicating the currently selected
         // radius.
         @IBOutlet weak var lblRadius: UILabel!
@@ -32,6 +37,7 @@ class ViewController: UIViewController {
         @IBOutlet weak var bttnGo: UIButton!
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         NSLog("view loaded")
         
@@ -40,6 +46,10 @@ class ViewController: UIViewController {
         
         geoFire.setLocation(CLLocation(latitude: 37.7853889, longitude: -122.4056973), forKey: "firebase-test")
         
+        // Initializing radius slider properties. Defaults to Int 2 miles.
+        sliderRadiusSlider.minimumValue = 1
+        sliderRadiusSlider.maximumValue = 10
+        sliderRadiusSlider.value = 2
         
     }
 
