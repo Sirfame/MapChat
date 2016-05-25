@@ -26,7 +26,7 @@ class ViewController: UIViewController {
         // MAP SCENE: sliderRadiusSliderChanged - Action that occurs when sliderRadiusSlider is
         // slid.
         @IBAction func sliderRadiusSliderChanged(sender: UISlider) {
-            var currentValue = Int(sender.value)
+            let currentValue = Int(sender.value)
             lblRadius.text = "\(currentValue)"
         }
     
