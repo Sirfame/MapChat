@@ -19,24 +19,30 @@ class ViewController: UIViewController {
     // IBOutlets //////////////////////////////////////////////////////////////////////////////////
     ///////////////////////////////////////////////////////////////////////////////////////////////
     
-        // MAP SCENE: sliderRadiusSlider - Slider beneath the map used to adjust the radius of
-        // prospective chatters.
-        @IBOutlet weak var sliderRadiusSlider: UISlider!
+    // MAP SCENE: sliderRadiusSlider - Slider beneath the map used to adjust the radius of
+    // prospective chatters.
+    @IBOutlet weak var sliderRadiusSlider: UISlider!
     
-        // MAP SCENE: sliderRadiusSliderChanged - Action that occurs when sliderRadiusSlider is
-        // slid.
-        @IBAction func sliderRadiusSliderChanged(sender: UISlider) {
-            let currentValue = Int(sender.value)
-            lblRadius.text = "\(currentValue)"
-        }
+    // MAP SCENE: sliderRadiusSliderChanged - Action that occurs when sliderRadiusSlider is
+    // slid.
+    @IBAction func sliderRadiusSliderChanged(sender: UISlider) {
+        
+        let currentValue = Int(sender.value)
+        lblRadius.text = "\(currentValue)"
+        
+    }
     
-        // MAP SCENE: lblRadius - Label beneath the slider indicating the currently selected
-        // radius.
-        @IBOutlet weak var lblRadius: UILabel!
+    // MAP SCENE: lblRadius - Label beneath the slider indicating the currently selected
+    // radius.
+    @IBOutlet weak var lblRadius: UILabel!
     
-        // MAP SCENE: bttnGo - Button beneath the slider. Randomly selects a person within the
-        // radius and redirects the user to a new chat with them upon being pressed.
-        @IBOutlet weak var bttnGo: UIButton!
+    // MAP SCENE: bttnGo - Button beneath the slider. Randomly selects a person within the
+    // radius and redirects the user to a new chat with them upon being pressed.
+    @IBOutlet weak var bttnGo: UIButton!
+    
+    ///////////////////////////////////////////////////////////////////////////////////////////////
+    // VIEWDIDLOAD ////////////////////////////////////////////////////////////////////////////////
+    ///////////////////////////////////////////////////////////////////////////////////////////////
     
     override func viewDidLoad() {
         
@@ -55,11 +61,14 @@ class ViewController: UIViewController {
         
     }
 
+    ///////////////////////////////////////////////////////////////////////////////////////////////
+    // DIDRECEIVEMEMORYWARNING ////////////////////////////////////////////////////////////////////
+    ///////////////////////////////////////////////////////////////////////////////////////////////
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
 
 }
 
