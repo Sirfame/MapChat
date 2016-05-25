@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		1845145291457B34D297F177 /* Pods_MapChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94318915D88927847A20B00B /* Pods_MapChat.framework */; };
 		2A70F5DCA727F069D51A5C01 /* Pods_MapChatTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EF31DDF14ED860E448CF50E /* Pods_MapChatTests.framework */; };
+		49D14FB11CF40C2A001891B5 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49D14FB01CF40C2A001891B5 /* CoreLocation.framework */; };
+		49D14FB31CF5221C001891B5 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D14FB21CF5221C001891B5 /* Device.swift */; };
 		9D80B22D1CEE891900A768C0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9D80B22C1CEE891900A768C0 /* GoogleService-Info.plist */; };
 		9D80B22E1CEE891900A768C0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9D80B22C1CEE891900A768C0 /* GoogleService-Info.plist */; };
 		9D80B22F1CEE891900A768C0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9D80B22C1CEE891900A768C0 /* GoogleService-Info.plist */; };
@@ -46,6 +48,8 @@
 		0CA2A2EFA2F6B48BDDE102C0 /* Pods-MapChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MapChat.release.xcconfig"; path = "Pods/Target Support Files/Pods-MapChat/Pods-MapChat.release.xcconfig"; sourceTree = "<group>"; };
 		297F163EB2433127A30CA321 /* Pods-MapChatTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MapChatTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MapChatTests/Pods-MapChatTests.release.xcconfig"; sourceTree = "<group>"; };
 		42542677798C8296FDA30BA1 /* Pods_MapChatUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MapChatUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		49D14FB01CF40C2A001891B5 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		49D14FB21CF5221C001891B5 /* Device.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
 		792591189A4991C194A5504A /* Pods-MapChatTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MapChatTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MapChatTests/Pods-MapChatTests.debug.xcconfig"; sourceTree = "<group>"; };
 		7EF31DDF14ED860E448CF50E /* Pods_MapChatTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MapChatTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		94318915D88927847A20B00B /* Pods_MapChat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MapChat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -76,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49D14FB11CF40C2A001891B5 /* CoreLocation.framework in Frameworks */,
 				9DC957811CEE86240086B700 /* Social.framework in Frameworks */,
 				9DC9577F1CEE84F30086B700 /* MessageUI.framework in Frameworks */,
 				9DC9577D1CEE78330086B700 /* MapKit.framework in Frameworks */,
@@ -105,6 +110,7 @@
 		6D7A2D884B63C58512CB9138 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				49D14FB01CF40C2A001891B5 /* CoreLocation.framework */,
 				94318915D88927847A20B00B /* Pods_MapChat.framework */,
 				7EF31DDF14ED860E448CF50E /* Pods_MapChatTests.framework */,
 				42542677798C8296FDA30BA1 /* Pods_MapChatUITests.framework */,
@@ -160,6 +166,7 @@
 				C5D540331CED84E5008A0A2C /* Assets.xcassets */,
 				C5D540351CED84E5008A0A2C /* LaunchScreen.storyboard */,
 				C5D540381CED84E5008A0A2C /* Info.plist */,
+				49D14FB21CF5221C001891B5 /* Device.swift */,
 			);
 			path = MapChat;
 			sourceTree = "<group>";
@@ -447,6 +454,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49D14FB31CF5221C001891B5 /* Device.swift in Sources */,
 				C5D5402F1CED84E5008A0A2C /* ViewController.swift in Sources */,
 				C5D5402D1CED84E5008A0A2C /* AppDelegate.swift in Sources */,
 			);
