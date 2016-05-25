@@ -5,6 +5,28 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
+        <!--Settings-->
+        <scene sceneID="zfD-C4-dkN">
+            <objects>
+                <viewController title="Settings" id="DPW-6b-zCd" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fBr-57-Z0S"/>
+                        <viewControllerLayoutGuide type="bottom" id="cnD-n1-20l"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ZB7-jT-y53">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="2qy-ur-cNu"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8bu-0j-jhf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="878" y="1317"/>
+        </scene>
         <!--Chat Menu-->
         <scene sceneID="LL4-XW-7mA">
             <objects>
