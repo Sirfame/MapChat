@@ -1,5 +1,5 @@
 //
-//  ChatBubble.swift
+//  ChatTableViewCell.swift
 //  MapChat
 //
 //  Created by iGuest on 5/24/16.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ChatBubble: UITableViewCell {
+class ChatTableViewCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()

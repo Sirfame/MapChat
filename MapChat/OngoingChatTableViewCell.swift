@@ -16,8 +16,8 @@ class OngoingChatTableViewCell: UITableViewCell {
     // IBOutlets //////////////////////////////////////////////////////////////////////////////////
     ///////////////////////////////////////////////////////////////////////////////////////////////
     
-        // lblOngoingChat: The text displayed in the cell, indicating an ongoing chat.
-        @IBOutlet weak var lblOngoingChat: UILabel!
+    // lblOngoingChat: The text displayed in the cell, indicating an ongoing chat.
+    @IBOutlet weak var lblOngoingChat: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

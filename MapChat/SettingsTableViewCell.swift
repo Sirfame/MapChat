@@ -6,6 +6,8 @@
 //  Copyright © 2016 Neward's Favs. All rights reserved.
 //
 
+// SettingsTableViewCell: Handles the cells of the TableView in the Settings view.
+
 import UIKit
 
 class SettingsTableViewCell: UITableViewCell {
