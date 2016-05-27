@@ -13,13 +13,18 @@ import GeoFire
 import CoreLocation
 import MapKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, CLLocationManagerDelegate {
     
     let tableData = ["One","Two","Three"]
+    
+    let locManager = Device.LocManager
+    
+    let geofireRef = Firebase(url: "https://mapchat-2d278.firebaseio.com/location")
     
     ///////////////////////////////////////////////////////////////////////////////////////////////
     // IBOutlets //////////////////////////////////////////////////////////////////////////////////
     ///////////////////////////////////////////////////////////////////////////////////////////////
+    @IBOutlet weak var mapView: MKMapView!
     
     // MAP SCENE: sliderRadiusSlider - Slider beneath the map used to adjust the radius of
     // prospective chatters.
@@ -51,6 +56,55 @@ class ViewController: UIViewController {
         self.presentViewController(alertController, animated: true, completion: nil)
         
     }
+   
+    
+    func startSendingLocation(){
+        Device.setDeviceId()
+        
+        if !CLLocationManager.locationServicesEnabled() || !(CLLocationManager.authorizationStatus() == CLAuthorizationStatus.AuthorizedWhenInUse) {
+            locManager.requestWhenInUseAuthorization()
+        } else {
+            locManager.delegate = self
+            locManager.distanceFilter = 10
+            locManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
+            locManager.startUpdatingLocation()
+        }
+    }
+    
+    // location manager delegate functions
+    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        NSLog("received location")
+        let currLoc = locations[locations.count - 1]
+        let geoFire = GeoFire(firebaseRef: geofireRef)
+        geoFire.setLocation(CLLocation(latitude: currLoc.coordinate.latitude, longitude: currLoc.coordinate.longitude), forKey: Device.DeviceId)
+
+        zoomToLocation(currLoc.coordinate.latitude, long: currLoc.coordinate.longitude)
+    }
+    
+    func locationManager(manager: CLLocationManager, didFailWithError error: NSError) {
+        NSLog("failed to receive location")
+        NSLog("\(error)")
+    }
+    
+    func locationManager(manager: CLLocationManager, didChangeAuthorizationStatus status: CLAuthorizationStatus)  {
+        if status == CLAuthorizationStatus.AuthorizedWhenInUse {
+            startSendingLocation()
+        }
+    }
+    
+    func zoomToLocation(lat : CLLocationDegrees, long : CLLocationDegrees) {
+        let latDelta : CLLocationDegrees = 0.01
+        
+        let longDelta : CLLocationDegrees = 0.01
+        
+        let span : MKCoordinateSpan = MKCoordinateSpanMake(latDelta, longDelta)
+        
+        let location : CLLocationCoordinate2D = CLLocationCoordinate2DMake(lat, long)
+        
+        let region : MKCoordinateRegion = MKCoordinateRegionMake(location, span)
+        
+        mapView.setRegion(region, animated: false)
+    }
     
     ///////////////////////////////////////////////////////////////////////////////////////////////
     // VIEWDIDLOAD ////////////////////////////////////////////////////////////////////////////////
@@ -60,13 +114,7 @@ class ViewController: UIViewController {
         
         super.viewDidLoad()
         NSLog("view loaded")
-        sendLocation()
-        
-        // Do any additional setup after loading the view, typically from a nib.
-        let geofireRef = Firebase(url: "https://mapchat-2d278.firebaseio.com/")
-        let geoFire = GeoFire(firebaseRef: geofireRef)
-        
-        geoFire.setLocation(CLLocation(latitude: 37.7853889, longitude: -122.4056973), forKey: "firebase-test")
+        startSendingLocation()
         
         // Initializing radius slider properties. Defaults to Int 2 miles.
         sliderRadiusSlider.minimumValue = 1
@@ -74,25 +122,6 @@ class ViewController: UIViewController {
         sliderRadiusSlider.value = 2
     }
     
-    func sendLocation() -> (String, String) {
-        let geofireRef = Firebase(url: "https://mapchat-2d278.firebaseio.com/location")
-        let geoFire = GeoFire(firebaseRef: geofireRef)
-        
-        Device.setDeviceId()
-        
-        let locManager = Device.LocManager
-        
-        if !CLLocationManager.locationServicesEnabled() || !(CLLocationManager.authorizationStatus() == CLAuthorizationStatus.AuthorizedWhenInUse) {
-            
-            locManager.requestWhenInUseAuthorization()
-        }
-        
-        NSLog(Device.DeviceId)
-        
-        geoFire.setLocation(CLLocation(latitude: 38.7853889, longitude: -122.4056973), forKey: Device.DeviceId)
-        
-        return("", "")
-    }
 
     ///////////////////////////////////////////////////////////////////////////////////////////////
     // DIDRECEIVEMEMORYWARNING ////////////////////////////////////////////////////////////////////
@@ -102,6 +131,5 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
 }
 
