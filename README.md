@@ -10,4 +10,6 @@ If you haven't already, install CocoaPods from Terminal: `sudo gem install cocoa
 
 When pulling from the repo, update the pods by navigating to the MapChat folder via Terminal and executing this: `pod install`
 
+This will take a very long time.
+
 When editing, edit the MapChat.xcworkspace file, not MapChat.xcodeproj.
