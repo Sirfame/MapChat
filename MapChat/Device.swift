@@ -79,4 +79,10 @@ public class Device {
     }
     
     private static var _geofireRef : GeoFire = GeoFire(firebaseRef: Firebase(url :  "https://mapchat-2d278.firebaseio.com/location"))
+    
+    private static var _currentChatBuddyID : String = ""
+    public static var CurrentChatBuddyID : String {
+        get {return _currentChatBuddyID}
+        set(value) {_currentChatBuddyID = value}
+    }
 }

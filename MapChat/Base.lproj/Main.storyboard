@@ -155,7 +155,7 @@
                                     <action selector="sliderRadiusSliderChanged:" destination="WyY-7L-Rqm" eventType="valueChanged" id="i1r-t6-at8"/>
                                 </connections>
                             </slider>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ps8-v6-QSH">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Closest (500 ft)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ps8-v6-QSH">
                                 <rect key="frame" x="20" y="608" width="374" height="21"/>
                                 <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="14"/>
                                 <color key="textColor" red="0.33749944656755532" green="0.31029190363307474" blue="0.63316017670157065" alpha="1" colorSpace="calibratedRGB"/>
@@ -206,7 +206,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="ChatBubbleTableViewCell" id="zVF-1C-QKP" customClass="ChatTableViewCell" customModule="MapChat" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="92" width="374" height="44"/>
+                                        <rect key="frame" x="0.0" y="28" width="374" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="zVF-1C-QKP" id="i9m-hy-4u6">
                                             <rect key="frame" x="0.0" y="0.0" width="374" height="43.5"/>
@@ -279,7 +279,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="yOA-5X-84Y"/>
+        <segue reference="NhO-ZL-e5h"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
 </document>
