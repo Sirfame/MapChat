@@ -79,7 +79,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8bu-0j-jhf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="878" y="1323"/>
+            <point key="canvasLocation" x="414" y="1119"/>
         </scene>
         <!--Chat Menu-->
         <scene sceneID="LL4-XW-7mA">
@@ -122,10 +122,13 @@
                         <color key="backgroundColor" red="1" green="0.99215686274509807" blue="0.58039215686274515" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Chat" id="TSD-Cx-4eD"/>
+                    <connections>
+                        <segue destination="XEl-YC-Fdx" kind="show" id="NhO-ZL-e5h"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wxD-sp-1wq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="878" y="518"/>
+            <point key="canvasLocation" x="908" y="679"/>
         </scene>
         <!--Map-->
         <scene sceneID="nKd-rS-A3b">
@@ -141,6 +144,9 @@
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="g2f-LV-rzU">
                                 <rect key="frame" x="20" y="84" width="374" height="462"/>
+                                <connections>
+                                    <outlet property="delegate" destination="WyY-7L-Rqm" id="bch-PF-pAt"/>
+                                </connections>
                             </mapView>
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="kdP-D7-Tym">
                                 <rect key="frame" x="18" y="567" width="378" height="31"/>
@@ -149,7 +155,7 @@
                                     <action selector="sliderRadiusSliderChanged:" destination="WyY-7L-Rqm" eventType="valueChanged" id="i1r-t6-at8"/>
                                 </connections>
                             </slider>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="I want to talk to people within 2 miles." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ps8-v6-QSH">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ps8-v6-QSH">
                                 <rect key="frame" x="20" y="608" width="374" height="21"/>
                                 <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="14"/>
                                 <color key="textColor" red="0.33749944656755532" green="0.31029190363307474" blue="0.63316017670157065" alpha="1" colorSpace="calibratedRGB"/>
@@ -176,16 +182,17 @@
                         <outlet property="lblRadius" destination="ps8-v6-QSH" id="51g-y2-aHd"/>
                         <outlet property="mapView" destination="g2f-LV-rzU" id="6Nf-lj-wOg"/>
                         <outlet property="sliderRadiusSlider" destination="kdP-D7-Tym" id="Un8-cF-ayV"/>
+                        <segue destination="XEl-YC-Fdx" kind="show" identifier="chatsegue" id="yOA-5X-84Y"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gb9-yR-elD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1320" y="-273"/>
+            <point key="canvasLocation" x="1526" y="-309"/>
         </scene>
         <!--Chat-->
         <scene sceneID="9jr-Vk-9As">
             <objects>
-                <viewController title="Chat" id="XEl-YC-Fdx" sceneMemberID="viewController">
+                <viewController title="Chat" id="XEl-YC-Fdx" customClass="ChatController" customModule="MapChat" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="66y-Lh-kR0"/>
                         <viewControllerLayoutGuide type="bottom" id="IGM-Os-n6Q"/>
@@ -199,7 +206,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="ChatBubbleTableViewCell" id="zVF-1C-QKP" customClass="ChatTableViewCell" customModule="MapChat" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="374" height="44"/>
+                                        <rect key="frame" x="0.0" y="92" width="374" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="zVF-1C-QKP" id="i9m-hy-4u6">
                                             <rect key="frame" x="0.0" y="0.0" width="374" height="43.5"/>
@@ -219,19 +226,19 @@
                         </subviews>
                         <color key="backgroundColor" red="0.55686274509803924" green="1" blue="0.5725490196078431" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="Kpx-ne-S7O"/>
+                    <tabBarItem key="tabBarItem" title="Chat" id="Kpx-ne-S7O"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y5d-VH-BT7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1320" y="518"/>
+            <point key="canvasLocation" x="1526" y="679"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Dtv-0o-R4l">
             <objects>
-                <tabBarController id="OGi-rt-BSq" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="tabBarController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="OGi-rt-BSq" sceneMemberID="viewController">
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" translucent="NO" id="Fzj-Pc-9KQ">
@@ -271,5 +278,8 @@
             <point key="canvasLocation" x="734" y="-273"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="yOA-5X-84Y"/>
+    </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
 </document>

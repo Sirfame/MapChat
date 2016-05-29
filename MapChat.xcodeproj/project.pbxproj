@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1845145291457B34D297F177 /* Pods_MapChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94318915D88927847A20B00B /* Pods_MapChat.framework */; };
 		2A70F5DCA727F069D51A5C01 /* Pods_MapChatTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EF31DDF14ED860E448CF50E /* Pods_MapChatTests.framework */; };
+		49BECD911CFA4F8F004574E9 /* ChatController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BECD901CFA4F8F004574E9 /* ChatController.swift */; };
 		49D14FB11CF40C2A001891B5 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49D14FB01CF40C2A001891B5 /* CoreLocation.framework */; };
 		49D14FB31CF5221C001891B5 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D14FB21CF5221C001891B5 /* Device.swift */; };
 		9D80B22D1CEE891900A768C0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9D80B22C1CEE891900A768C0 /* GoogleService-Info.plist */; };
@@ -52,6 +53,7 @@
 		0CA2A2EFA2F6B48BDDE102C0 /* Pods-MapChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MapChat.release.xcconfig"; path = "Pods/Target Support Files/Pods-MapChat/Pods-MapChat.release.xcconfig"; sourceTree = "<group>"; };
 		297F163EB2433127A30CA321 /* Pods-MapChatTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MapChatTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MapChatTests/Pods-MapChatTests.release.xcconfig"; sourceTree = "<group>"; };
 		42542677798C8296FDA30BA1 /* Pods_MapChatUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MapChatUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		49BECD901CFA4F8F004574E9 /* ChatController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatController.swift; sourceTree = "<group>"; };
 		49D14FB01CF40C2A001891B5 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		49D14FB21CF5221C001891B5 /* Device.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
 		792591189A4991C194A5504A /* Pods-MapChatTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MapChatTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MapChatTests/Pods-MapChatTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -179,6 +181,7 @@
 				C5D540351CED84E5008A0A2C /* LaunchScreen.storyboard */,
 				C5D540381CED84E5008A0A2C /* Info.plist */,
 				49D14FB21CF5221C001891B5 /* Device.swift */,
+				49BECD901CFA4F8F004574E9 /* ChatController.swift */,
 			);
 			path = MapChat;
 			sourceTree = "<group>";
@@ -469,6 +472,7 @@
 				49D14FB31CF5221C001891B5 /* Device.swift in Sources */,
 				9DE807851CF5251D00FE3222 /* ChatMenuTableViewController.swift in Sources */,
 				C5D5402F1CED84E5008A0A2C /* ViewController.swift in Sources */,
+				49BECD911CFA4F8F004574E9 /* ChatController.swift in Sources */,
 				9DE8077F1CF51E0900FE3222 /* OngoingChatTableViewCell.swift in Sources */,
 				9D8E16E01CF53A95003DDA84 /* ChatTableViewCell.swift in Sources */,
 				C5D5402D1CED84E5008A0A2C /* AppDelegate.swift in Sources */,
