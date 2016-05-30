@@ -21,6 +21,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
     
     let geofireRef = Firebase(url: "https://mapchat-2d278.firebaseio.com/location")
     
+    let usersRef = Firebase(url: "https://mapchat-2d278.firebaseio.com/users")
+    
     var usersInRange : [String] = []
     
     var longMeters : CLLocationDistance = 0
@@ -272,6 +274,11 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         }
     }
     
+    func getUserInfo() {
+        usersRef.once(Device.DeviceId, function(data) {
+            // do some stuff once
+            });
+    }
     ///////////////////////////////////////////////////////////////////////////////////////////////
     // VIEWDIDLOAD ////////////////////////////////////////////////////////////////////////////////
     ///////////////////////////////////////////////////////////////////////////////////////////////
@@ -283,6 +290,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         mapView.tintColor = UIColor.blueColor()
         setUpGeoQuery()
         startSendingLocation()
+        getUserInfo()
         
         // Initializing radius slider properties. Defaults to
         sliderRadiusSlider.minimumValue = 1

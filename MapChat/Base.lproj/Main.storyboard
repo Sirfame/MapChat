@@ -192,7 +192,7 @@
         <!--Chat-->
         <scene sceneID="9jr-Vk-9As">
             <objects>
-                <viewController title="Chat" id="XEl-YC-Fdx" customClass="ChatController" customModule="MapChat" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Chat" id="XEl-YC-Fdx" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="66y-Lh-kR0"/>
                         <viewControllerLayoutGuide type="bottom" id="IGM-Os-n6Q"/>
@@ -205,23 +205,34 @@
                                 <rect key="frame" x="20" y="20" width="374" height="648"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="ChatBubbleTableViewCell" id="zVF-1C-QKP" customClass="ChatTableViewCell" customModule="MapChat" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="IndividualChatTableViewCell" selectionStyle="none" indentationWidth="10" reuseIdentifier="ChatBubbleTableViewCell" rowHeight="44" id="zVF-1C-QKP" userLabel="IndividualChatTableViewCell" customClass="IndividualChatTableViewCell" customModule="MapChat" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="374" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="zVF-1C-QKP" id="i9m-hy-4u6">
                                             <rect key="frame" x="0.0" y="0.0" width="374" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="User: Message" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vsc-Ag-aeZ">
-                                                    <rect key="frame" x="8" y="8" width="115" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vsc-Ag-aeZ">
+                                                    <rect key="frame" x="8" y="8" width="27" height="14.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="vsc-Ag-aeZ" firstAttribute="leading" secondItem="i9m-hy-4u6" secondAttribute="leadingMargin" id="9zz-CH-iZU"/>
+                                                <constraint firstItem="vsc-Ag-aeZ" firstAttribute="top" secondItem="i9m-hy-4u6" secondAttribute="topMargin" id="vkB-at-j8w"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="userLabel" destination="vsc-Ag-aeZ" id="SfS-MU-OxQ"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="XEl-YC-Fdx" id="It9-EU-wUL"/>
+                                    <outlet property="delegate" destination="XEl-YC-Fdx" id="TmC-z2-tnE"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" red="0.55686274509803924" green="1" blue="0.5725490196078431" alpha="1" colorSpace="calibratedRGB"/>
