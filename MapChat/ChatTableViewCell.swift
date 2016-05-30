@@ -6,6 +6,8 @@
 //  Copyright © 2016 Neward's Favs. All rights reserved.
 //
 
+// ChatTableViewCell: Handles the cells of the TableView in the Chat screen.
+
 import UIKit
 
 class ChatTableViewCell: UITableViewCell {
