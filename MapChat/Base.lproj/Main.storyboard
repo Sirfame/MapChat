@@ -220,6 +220,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="lblMessage" destination="vsc-Ag-aeZ" id="Dal-pa-7gb"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
