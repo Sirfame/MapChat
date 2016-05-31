@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="OGi-rt-BSq">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="OGi-rt-BSq">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -142,27 +142,39 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="687"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="g2f-LV-rzU">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="g2f-LV-rzU">
                                 <rect key="frame" x="20" y="84" width="374" height="462"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="462" id="ckz-sK-0KJ"/>
+                                    <constraint firstAttribute="width" constant="374" id="m3F-wP-HI3"/>
+                                </constraints>
                                 <connections>
                                     <outlet property="delegate" destination="WyY-7L-Rqm" id="bch-PF-pAt"/>
                                 </connections>
                             </mapView>
-                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="kdP-D7-Tym">
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="kdP-D7-Tym">
                                 <rect key="frame" x="18" y="567" width="378" height="31"/>
                                 <color key="tintColor" red="0.54509803921568623" green="0.49411764705882355" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="VQv-F0-Xex"/>
+                                    <constraint firstAttribute="width" constant="374" id="xdt-EE-Vnr"/>
+                                </constraints>
                                 <connections>
                                     <action selector="sliderRadiusSliderChanged:" destination="WyY-7L-Rqm" eventType="valueChanged" id="i1r-t6-at8"/>
                                 </connections>
                             </slider>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Closest (500 ft)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ps8-v6-QSH">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Closest (500 ft)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ps8-v6-QSH">
                                 <rect key="frame" x="20" y="608" width="374" height="21"/>
                                 <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="14"/>
                                 <color key="textColor" red="0.33749944656755532" green="0.31029190363307474" blue="0.63316017670157065" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EmB-Lo-oZp">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EmB-Lo-oZp">
                                 <rect key="frame" x="161" y="643" width="93" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="93" id="IvO-2b-C6T"/>
+                                    <constraint firstAttribute="height" constant="30" id="qLP-bO-hjQ"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="23"/>
                                 <state key="normal" title="Go!">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -173,6 +185,19 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.61568627450980395" green="0.58823529411764708" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="kdP-D7-Tym" firstAttribute="centerX" secondItem="EmB-Lo-oZp" secondAttribute="centerX" id="1Ae-IA-8wg"/>
+                            <constraint firstItem="EmB-Lo-oZp" firstAttribute="top" secondItem="ps8-v6-QSH" secondAttribute="bottom" constant="14" id="4gH-Jg-Kut"/>
+                            <constraint firstItem="g2f-LV-rzU" firstAttribute="top" secondItem="vft-Mi-DIu" secondAttribute="bottom" constant="20" id="5oC-iA-m7M"/>
+                            <constraint firstItem="FIV-Tz-oEH" firstAttribute="top" secondItem="EmB-Lo-oZp" secondAttribute="bottom" constant="14" id="AFV-wb-iNf"/>
+                            <constraint firstItem="g2f-LV-rzU" firstAttribute="leading" secondItem="uRA-W6-RnU" secondAttribute="leadingMargin" id="HNm-Pq-DaN"/>
+                            <constraint firstItem="kdP-D7-Tym" firstAttribute="trailing" secondItem="ps8-v6-QSH" secondAttribute="trailing" id="QAU-xK-B9r"/>
+                            <constraint firstItem="kdP-D7-Tym" firstAttribute="leading" secondItem="ps8-v6-QSH" secondAttribute="leading" id="QTS-mt-Npq"/>
+                            <constraint firstItem="kdP-D7-Tym" firstAttribute="leading" secondItem="g2f-LV-rzU" secondAttribute="leading" id="Vl9-Yq-pSk"/>
+                            <constraint firstItem="ps8-v6-QSH" firstAttribute="top" secondItem="kdP-D7-Tym" secondAttribute="bottom" constant="11" id="Z0A-RE-fiA"/>
+                            <constraint firstItem="kdP-D7-Tym" firstAttribute="top" secondItem="g2f-LV-rzU" secondAttribute="bottom" constant="21" id="a8P-xT-pcG"/>
+                            <constraint firstItem="g2f-LV-rzU" firstAttribute="trailing" secondItem="uRA-W6-RnU" secondAttribute="trailingMargin" id="xcH-3t-TQL"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="x0N-u2-TpN"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
@@ -206,7 +231,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="ChatBubbleTableViewCell" id="zVF-1C-QKP" customClass="ChatTableViewCell" customModule="MapChat" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="374" height="44"/>
+                                        <rect key="frame" x="0.0" y="92" width="374" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="zVF-1C-QKP" id="i9m-hy-4u6">
                                             <rect key="frame" x="0.0" y="0.0" width="374" height="43"/>
@@ -282,7 +307,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="NhO-ZL-e5h"/>
+        <segue reference="yOA-5X-84Y"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
 </document>
