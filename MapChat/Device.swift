@@ -85,4 +85,10 @@ public class Device {
         get {return _currentChatBuddyID}
         set(value) {_currentChatBuddyID = value}
     }
+    
+    private static var _username : String = ""
+    public static var username : String {
+        get {return _username}
+        set(value) {_username = value}
+    }
 }
