@@ -1,5 +1,5 @@
 //
-//  ChatTableViewCell.swift
+//  AllChatsTableViewCell.swift
 //  MapChat
 //
 //  Created by iGuest on 5/24/16.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ChatTableViewCell: UITableViewCell {
+class AllChatsTableViewCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()

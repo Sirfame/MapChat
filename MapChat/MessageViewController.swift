@@ -11,7 +11,5 @@ import UIKit
 import JSQMessagesViewController
 
 class MessageViewController : JSQMessagesViewController {
-    var messages = [Message]()
-    
-    
+//    var messages = [Message]()
 }

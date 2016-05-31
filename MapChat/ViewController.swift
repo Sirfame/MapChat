@@ -136,13 +136,14 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
     
     // if the user has not enabled authorization, request authorization. Otherwise, start sending the user location.
     func startSendingLocation(){
-        Device.setDeviceId()
-        Device.GeoFireRef = GeoFire(firebaseRef: geofireRef)
+        
         
         if !CLLocationManager.locationServicesEnabled() || !(CLLocationManager.authorizationStatus() == CLAuthorizationStatus.AuthorizedWhenInUse) {
             locManager.requestWhenInUseAuthorization()
             // show error message here if the user doesn't allow access to location services
         } else {
+            Device.setDeviceId()
+            Device.GeoFireRef = GeoFire(firebaseRef: geofireRef)
             locManager.delegate = self
             locManager.distanceFilter = 10
             locManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
@@ -274,11 +275,11 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         }
     }
     
-    func getUserInfo() {
-        usersRef.once(Device.DeviceId, function(data) {
-            // do some stuff once
-            });
-    }
+//    func getUserInfo() {
+//        usersRef.once(Device.DeviceId, function(data) {
+//            // do some stuff once
+//            });
+//    }
     ///////////////////////////////////////////////////////////////////////////////////////////////
     // VIEWDIDLOAD ////////////////////////////////////////////////////////////////////////////////
     ///////////////////////////////////////////////////////////////////////////////////////////////
@@ -290,7 +291,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         mapView.tintColor = UIColor.blueColor()
         setUpGeoQuery()
         startSendingLocation()
-        getUserInfo()
+//        getUserInfo()
         
         // Initializing radius slider properties. Defaults to
         sliderRadiusSlider.minimumValue = 1
