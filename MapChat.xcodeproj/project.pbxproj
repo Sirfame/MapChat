@@ -280,6 +280,7 @@
 				TargetAttributes = {
 					C5D540281CED84E5008A0A2C = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 59U69626W7;
 					};
 					C5D5403C1CED84E5008A0A2C = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -619,10 +620,13 @@
 			baseConfigurationReference = B510C394ABE9858847B3590C /* Pods-MapChat.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = MapChat/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ischool.MapChat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -631,10 +635,13 @@
 			baseConfigurationReference = 0CA2A2EFA2F6B48BDDE102C0 /* Pods-MapChat.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = MapChat/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ischool.MapChat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
