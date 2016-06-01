@@ -54,21 +54,21 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
     ///////////////////////////////////////////////////////////////////////////////////////////////
     @IBOutlet weak var mapView: MKMapView!
     
-    // MAP SCENE: sliderRadiusSlider - Slider beneath the map used to adjust the radius of
+    // sliderRadiusSlider - Slider beneath the map used to adjust the radius of
     // prospective chatters.
     @IBOutlet weak var sliderRadiusSlider: UISlider!
     
 
     
-    // MAP SCENE: lblRadius - Label beneath the slider indicating the currently selected
+    // lblRadius - Label beneath the slider indicating the currently selected
     // radius.
     @IBOutlet weak var lblRadius: UILabel!
     
-    // MAP SCENE: bttnGo - Button beneath the slider. Randomly selects a person within the
+    // bttnGo - Button beneath the slider. Randomly selects a person within the
     // radius and redirects the user to a new chat with them upon being pressed.
     @IBOutlet weak var bttnGo: UIButton!
     
-    // MAP SCENE: sliderRadiusSliderChanged - Action that occurs when sliderRadiusSlider is
+    // sliderRadiusSliderChanged - Action that occurs when sliderRadiusSlider is
     // slid.
     @IBAction func sliderRadiusSliderChanged(sender: UISlider) {
         let roundedValue = Int(round(sender.value))
@@ -102,7 +102,11 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         }
     }
     
-    // MAP SCENE: bttnGoPressed - Action that occurs when bttnGo is pressed.
+    ///////////////////////////////////////////////////////////////////////////////////////////////
+    // IBActions //////////////////////////////////////////////////////////////////////////////////
+    ///////////////////////////////////////////////////////////////////////////////////////////////
+    
+    // bttnGoPressed - Action that occurs when bttnGo is pressed.
     @IBAction func bttnGoPressed(sender: UIButton) {
         NSLog("\(usersInRange.description)")
         NSLog("showing alert controller")
@@ -330,7 +334,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
 //    }
     
     ///////////////////////////////////////////////////////////////////////////////////////////////
-    // VIEWDIDLOAD ////////////////////////////////////////////////////////////////////////////////
+    // viewDidLoad ////////////////////////////////////////////////////////////////////////////////
     ///////////////////////////////////////////////////////////////////////////////////////////////
     
     override func viewDidLoad() {
@@ -350,7 +354,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
     
 
     ///////////////////////////////////////////////////////////////////////////////////////////////
-    // DIDRECEIVEMEMORYWARNING ////////////////////////////////////////////////////////////////////
+    // didReceiveMemoryWarning ////////////////////////////////////////////////////////////////////
     ///////////////////////////////////////////////////////////////////////////////////////////////
     
     override func didReceiveMemoryWarning() {

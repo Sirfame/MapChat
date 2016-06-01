@@ -14,13 +14,17 @@ class SettingsViewController: UIViewController, UIImagePickerControllerDelegate,
     
     // imagePicker - The ImagePickerController; picks images.
     let imagePicker = UIImagePickerController()
-    //
+    
     var usersRef = Firebase(url: "https://mapchat-2d278.firebaseio.com/users/\(Device.DeviceId)")
     
-    
-    // Ran into a bug here, deleted contents.
+    // Ran into a bug here, deleted contents. Kept function in case you need to use it later.
     func storeUsername() {
     }
+    
+    /*func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
+     self.textField.resignFirstResponder()
+     }
+     */
     
     ///////////////////////////////////////////////////////////////////////////////////////////////
     // IBOutlets //////////////////////////////////////////////////////////////////////////////////
@@ -51,7 +55,6 @@ class SettingsViewController: UIViewController, UIImagePickerControllerDelegate,
         imagePicker.allowsEditing = false
         imagePicker.sourceType = .PhotoLibrary
         presentViewController(imagePicker, animated: true, completion: nil)
-        //
     }
     
     // changeUserName - Executed upon clicking bttnChangeName; changes the user's name.
@@ -60,6 +63,9 @@ class SettingsViewController: UIViewController, UIImagePickerControllerDelegate,
         let newName = txtfldUserName.text
         NSLog("New name: \(newName)")
         lblUserName.text = newName
+        // CODE TO SEND newName TO FIREBASE HERE
+        // May want to verify if names are already taken. I think it's something Neward would
+        // try to trip us up.
     }
     
     ///////////////////////////////////////////////////////////////////////////////////////////////
@@ -69,11 +75,6 @@ class SettingsViewController: UIViewController, UIImagePickerControllerDelegate,
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-    
-    /*func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
-        self.textField.resignFirstResponder()
-    }
-    */
     
     ///////////////////////////////////////////////////////////////////////////////////////////////
     // viewDidLoad ////////////////////////////////////////////////////////////////////////////////
@@ -88,17 +89,19 @@ class SettingsViewController: UIViewController, UIImagePickerControllerDelegate,
     // imagePicker ////////////////////////////////////////////////////////////////////////////////
     ///////////////////////////////////////////////////////////////////////////////////////////////
     
-    // imagePickerController - Handles the presentation of the imagePickerController.
+    // imagePickerController - Handles the presentation of the imagePickerController; sets
+    // imgViewUserPic to the image selected in the imagePickerController.
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
         if let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
             imgviewUserPic.contentMode = .ScaleAspectFit
             imgviewUserPic.image = pickedImage
-            // CODE TO RECEIVE pickedImage AND SEND TO FIREBASE HERE
+            // CODE TO SEND pickedImage TO FIREBASE HERE
         }
         dismissViewControllerAnimated(true, completion: nil)
     }
     
-    //
+    // imagePickerControllerDidCancel - Specifies what to do if an image is not selected when
+    // using imagePickerController.
     func imagePickerControllerDidCancel(picker: UIImagePickerController) {
         dismissViewControllerAnimated(true, completion: nil)
     }
