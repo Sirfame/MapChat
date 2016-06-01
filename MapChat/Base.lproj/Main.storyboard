@@ -24,16 +24,6 @@
                                     <constraint firstAttribute="height" constant="230" id="bVp-jv-Xdo"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Elr-vC-Lig">
-                                <rect key="frame" x="161" y="304" width="93" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="93" id="Gp2-d7-5tt"/>
-                                    <constraint firstAttribute="height" constant="21" id="mAX-0A-kGd"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="17"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6q9-nu-0mk">
                                 <rect key="frame" x="117" y="266" width="181" height="30"/>
                                 <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="12"/>
@@ -67,13 +57,22 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Elr-vC-Lig">
+                                <rect key="frame" x="87" y="304" width="240" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="1Sw-Wl-zhR"/>
+                                    <constraint firstAttribute="width" constant="240" id="fXw-hH-VTx"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.51764705882352946" blue="0.52941176470588236" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="I5q-x9-a7b" firstAttribute="top" secondItem="Elr-vC-Lig" secondAttribute="bottom" constant="20" id="71w-By-ib2"/>
                             <constraint firstItem="6q9-nu-0mk" firstAttribute="top" secondItem="q80-2W-mhI" secondAttribute="bottom" constant="8" id="7q7-h8-N4a"/>
                             <constraint firstItem="Elr-vC-Lig" firstAttribute="top" secondItem="6q9-nu-0mk" secondAttribute="bottom" constant="1" id="9SI-62-jnL"/>
-                            <constraint firstItem="Elr-vC-Lig" firstAttribute="leading" secondItem="HVE-aH-EJ8" secondAttribute="leading" id="Dej-hr-h4s"/>
                             <constraint firstItem="q80-2W-mhI" firstAttribute="top" secondItem="fBr-57-Z0S" secondAttribute="bottom" constant="8" symbolic="YES" id="G3i-KL-P7h"/>
                             <constraint firstItem="HVE-aH-EJ8" firstAttribute="top" secondItem="I5q-x9-a7b" secondAttribute="bottom" constant="10" id="Gis-Tk-G83"/>
                             <constraint firstItem="Elr-vC-Lig" firstAttribute="top" secondItem="ZB7-jT-y53" secondAttribute="top" constant="304" id="KHo-iq-Qty"/>
@@ -83,6 +82,7 @@
                             <constraint firstItem="q80-2W-mhI" firstAttribute="leading" secondItem="ZB7-jT-y53" secondAttribute="leadingMargin" constant="67" id="gcW-BJ-JyT"/>
                             <constraint firstItem="Elr-vC-Lig" firstAttribute="centerX" secondItem="I5q-x9-a7b" secondAttribute="centerX" id="i1Y-O5-VRl"/>
                             <constraint firstItem="HVE-aH-EJ8" firstAttribute="centerX" secondItem="ZB7-jT-y53" secondAttribute="centerX" id="pmZ-ZJ-bwI"/>
+                            <constraint firstItem="q80-2W-mhI" firstAttribute="leading" secondItem="Elr-vC-Lig" secondAttribute="leading" id="pxT-KZ-OhM"/>
                             <constraint firstItem="Elr-vC-Lig" firstAttribute="top" secondItem="6q9-nu-0mk" secondAttribute="bottom" constant="10" id="uNk-ug-nks"/>
                         </constraints>
                         <variation key="default">

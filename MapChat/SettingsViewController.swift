@@ -39,11 +39,15 @@ class SettingsViewController : UIViewController {
     // changeUserPic - Executed upon clicking bttnChangePic; changes the user's pic.
     @IBAction func changeUserPic(sender: UIButton) {
         NSLog("Changing user pic.")
+        
     }
     
     // changeUserName - Executed upon clicking bttnChangeName; changes the user's name.
     @IBAction func changeUserName(sender: UIButton) {
         NSLog("Changing user name.")
+        let newName = txtfldUserName.text
+        NSLog("New name: \(newName)")
+        lblUserName.text = newName
     }
     
     override func didReceiveMemoryWarning() {
