@@ -100,7 +100,6 @@
                         <outlet property="bttnChangeName" destination="HVE-aH-EJ8" id="Byh-ZB-k2a"/>
                         <outlet property="bttnChangePic" destination="6q9-nu-0mk" id="imB-7t-uoG"/>
                         <outlet property="lblUserName" destination="Elr-vC-Lig" id="NKC-0u-s3N"/>
-                        <outlet property="textField" destination="I5q-x9-a7b" id="HM2-fq-caT"/>
                         <outlet property="txtfldUserName" destination="I5q-x9-a7b" id="jGE-GU-UzF"/>
                     </connections>
                 </viewController>

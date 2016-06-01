@@ -49,7 +49,6 @@ class SettingsViewController : UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-    @IBOutlet weak var textField: UITextField!
     
     /*func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
         self.textField.resignFirstResponder()
