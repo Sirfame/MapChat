@@ -10,7 +10,7 @@
 
 import UIKit
 
-class AllChatTableViewCell: UITableViewCell {
+class AllChatsTableViewCell: UITableViewCell {
 
     @IBOutlet weak var lblUser: UILabel!
     @IBOutlet weak var lblMessage: UILabel!
