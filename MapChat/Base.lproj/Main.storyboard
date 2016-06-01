@@ -110,7 +110,7 @@
                                                         <constraint firstAttribute="height" constant="21" id="3kI-f9-P1J"/>
                                                         <constraint firstAttribute="width" constant="72" id="QdX-dj-2y2"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="14"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -120,7 +120,7 @@
                                                         <constraint firstAttribute="height" constant="21" id="59f-ed-6UI"/>
                                                         <constraint firstAttribute="width" constant="278" id="bpT-rC-MPc"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="14"/>
                                                     <color key="textColor" red="0.33544666230366493" green="0.33544666230366493" blue="0.33544666230366493" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
