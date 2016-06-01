@@ -22,6 +22,7 @@ class AllChatsViewController : UIViewController, UITableViewDataSource {
     ///////////////////////////////////////////////////////////////////////////////////////////////
     
     override func viewDidLoad() {
+        // Injects dummy data for testing purposes.
         func injectDummyData() {
             convoArray.append((username: "Chris", message: "wadup fam"))
             convoArray.append((username: "Joel", message: "help swift is killing me"))
@@ -35,6 +36,7 @@ class AllChatsViewController : UIViewController, UITableViewDataSource {
         super.didReceiveMemoryWarning()
     }
     
+    // There is one section in the table view.
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }
@@ -44,8 +46,13 @@ class AllChatsViewController : UIViewController, UITableViewDataSource {
         return convoArray.count
     }
     
+    // Creates and configures cells to populate the convorsation table view.
     func tableView(_ tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        return X_OK
+        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
+        
+        // Configure the cell...
+        
+        return cell
     }
 
     
