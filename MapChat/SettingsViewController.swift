@@ -8,8 +8,13 @@
 
 import Foundation
 import UIKit
+import Firebase
 
 class SettingsViewController : UIViewController {
+    
+    var username = "ALYSSAAA TEST"
+    
+    var usersRef = Firebase(url: "https://mapchat-2d278.firebaseio.com/users/\(Device.DeviceId)")
     
     @IBOutlet weak var UserNameLabel: UILabel!
     
@@ -32,5 +37,11 @@ class SettingsViewController : UIViewController {
     */
     override func viewDidLoad() {
 
+    }
+    
+    func storeUsername() {
+        let username = ["username": self.username]
+        
+        usersRef.updateChildValues(username)
     }
 }

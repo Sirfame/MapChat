@@ -12,6 +12,10 @@ import JSQMessagesViewController
 import Firebase
 
 class MessageViewController : JSQMessagesViewController {
+    let chatId = "Test2"
+    let rootRef = Firebase(url: "https://mapchat-2d278.firebaseio.com")
+    var messageRef: Firebase!
+    
     var messages = [JSQMessage]()
     var outgoingBubbleImageView: JSQMessagesBubbleImage!
     var incomingBubbleImageView: JSQMessagesBubbleImage!
@@ -38,6 +42,23 @@ class MessageViewController : JSQMessagesViewController {
         return nil
     }
     
+    override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+        let cell = super.collectionView(collectionView, cellForItemAtIndexPath: indexPath) as! JSQMessagesCollectionViewCell
+        
+        let message = messages[indexPath.item]
+        
+        if message.senderId == senderId {
+            cell.textView!.textColor = UIColor.whiteColor()
+        } else {
+            cell.textView!.textColor = UIColor.blackColor()
+        }
+        return cell
+    }
+    
+    override func didPressSendButton(button: UIButton!, withMessageText text: String!, senderId: String!, senderDisplayName: String!, date: NSDate!) {
+        let itemRef = messageRef.childByAutoId()
+    }
+    
     private func setupBubbles() {
         let factory = JSQMessagesBubbleImageFactory()
         outgoingBubbleImageView = factory.outgoingMessagesBubbleImageWithColor(UIColor.jsq_messageBubbleBlueColor())
@@ -55,6 +76,8 @@ class MessageViewController : JSQMessagesViewController {
         setupBubbles()
         collectionView!.collectionViewLayout.incomingAvatarViewSize = CGSizeZero
         collectionView!.collectionViewLayout.outgoingAvatarViewSize = CGSizeZero
+        
+        messageRef = rootRef.childByAppendingPath("messages/\(self.chatId)")
     }
     
     override func viewDidAppear(animated: Bool) {

@@ -23,6 +23,10 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
     
     let usersRef = Firebase(url: "https://mapchat-2d278.firebaseio.com/users")
     
+    let messagesRef = Firebase(url: "https://mapchat-2d278.firebaseio.com/messages")
+    
+    let chatsRef = Firebase(url: "https://mapchat-2d278.firebaseio.com/chats")
+    
     var usersInRange : [String] = []
     
     var longMeters : CLLocationDistance = 0
@@ -119,6 +123,13 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         self.updateMap()
     }
     
+    // store all relevant chat information in local Device static class and also in the database so that it can be used to pull messages, user info and chat lists 
+    
+    // To pull chats, look in the users object in the database to get the Chat IDs and other users names (to display in the all chats table view)
+    
+    // To pull user info, look in the users object. There's a place to store the username and the profilepictureURL (assuming it needs to be in base64 based (haha!) on preliminary tutorials that Chris looked up 
+
+    
     func setChatBuddy() {
         var randomNumber = 0
 
@@ -128,16 +139,53 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
 
         if (self.usersInRange.count > 0) {
             Device.CurrentChatBuddyID = self.usersInRange[randomNumber]
+            let chatRef = chatsRef.childByAutoId()
+            
+            Device.CurrChatId = chatRef.key
+            
+            let chatEntry = [
+                "deviceID1" : Device.DeviceId,
+                "deviceID2" : Device.CurrentChatBuddyID
+            ]
+            
+            chatRef.setValue(chatEntry)
+            
+            let messageRef = messagesRef.childByAppendingPath(Device.CurrChatId)
+            
+            let firstMessage = [
+                "sender" : Device.Username,
+                "message" : "Hello there new friend!"
+             ]
+            
+            let newMessageRef = messageRef.childByAutoId()
+            newMessageRef.setValue(firstMessage)
+            
+            let userRef = usersRef.childByAppendingPath(Device.DeviceId)
+            
+            let devicePath = userRef.childByAppendingPath("DeviceID")
+            devicePath.setValue(Device.DeviceId)
+            
+            let usernamePath = userRef.childByAppendingPath("username")
+            usernamePath.setValue(Device.Username)
+            
+            let newChatId = [Device.CurrChatId : true]
+            
+            let childUpdates = ["/\(Device.DeviceId)/chats/\(Device.CurrChatId)" : newChatId,
+                                "/\(Device.CurrentChatBuddyID)/chats/\(Device.CurrChatId)" : newChatId]
+            
+            usersRef.updateChildValues(childUpdates)
+            
         } else {
-            Device.CurrentChatBuddyID = ""
+            let alertController = UIAlertController(title: "Are you ready to chat?", message:"", preferredStyle: UIAlertControllerStyle.Alert)
+            alertController.message = "Sorry, there's no one currently in your vicinity! Try adjusting the chat radius or come back later."
+            alertController.addAction(UIAlertAction(title: "Okay", style: UIAlertActionStyle.Default, handler: nil))
+            self.presentViewController(alertController, animated: true, completion: nil)
         }
-        NSLog("chat buddy set, device ID set to \(Device.CurrentChatBuddyID)")
+        NSLog("chat buddy set, device ID set to \(Device.CurrentChatBuddyID), current chat id set to \(Device.CurrChatId)")
     }
     
     // if the user has not enabled authorization, request authorization. Otherwise, start sending the user location.
     func startSendingLocation(){
-        
-        
         if !CLLocationManager.locationServicesEnabled() || !(CLLocationManager.authorizationStatus() == CLAuthorizationStatus.AuthorizedWhenInUse) {
             locManager.requestWhenInUseAuthorization()
             // show error message here if the user doesn't allow access to location services

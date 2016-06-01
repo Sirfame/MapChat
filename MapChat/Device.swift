@@ -98,10 +98,10 @@ public class Device {
         set(value) {_username = value}
     }
     
-    private static var _currChat : String = ""
+    private static var _currChatId : String = ""
     
-    public static var CurrChat : String {
-        get {return _currChat}
-        set(value) {_currChat = value}
+    public static var CurrChatId : String {
+        get {return _currChatId}
+        set(value) {_currChatId = value}
     }
 }
