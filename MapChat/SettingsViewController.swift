@@ -22,11 +22,13 @@ class SettingsViewController : UIViewController {
     
     // lblUserName - Label displaying the user's name.
     @IBOutlet weak var lblUserName: UILabel!
+    
     // txtfldUserName - TextField to input the user's name.
     @IBOutlet weak var txtfldUserName: UITextField!
-    @IBOutlet weak var UserNameLabel: UILabel!
+    
     // bttnChangePic - Button pressed when changing user's pic.
     @IBOutlet weak var bttnChangePic: UIButton!
+    
     // bttnChangeName - Button pressed when changing user's name.
     @IBOutlet weak var bttnChangeName: UIButton!
     

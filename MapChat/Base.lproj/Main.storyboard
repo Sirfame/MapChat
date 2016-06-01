@@ -97,7 +97,6 @@
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
-                        <outlet property="UserNameLabel" destination="Elr-vC-Lig" id="NNG-s8-BeQ"/>
                         <outlet property="bttnChangeName" destination="HVE-aH-EJ8" id="Byh-ZB-k2a"/>
                         <outlet property="bttnChangePic" destination="6q9-nu-0mk" id="imB-7t-uoG"/>
                         <outlet property="lblUserName" destination="Elr-vC-Lig" id="NKC-0u-s3N"/>
