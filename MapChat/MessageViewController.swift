@@ -9,7 +9,10 @@
 import Foundation
 import UIKit
 import JSQMessagesViewController
+import Firebase
 
 class MessageViewController : JSQMessagesViewController {
-//    var messages = [Message]()
+    
+    
 }
+

@@ -110,7 +110,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
             
             alertController.addAction(UIAlertAction(title: "Okay", style: UIAlertActionStyle.Default, handler: { action in
                 self.setChatBuddy()
-                self.performSegueWithIdentifier("chatsegue", sender: self) }))
+                self.performSegueWithIdentifier("GoToChat", sender: self) }))
         } else {
             alertController.message = "Sorry, there's no one currently in your vicinity! Try adjusting the chat radius or come back later."
             alertController.addAction(UIAlertAction(title: "Okay", style: UIAlertActionStyle.Default, handler: nil))
@@ -307,6 +307,16 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "GoToChat" {
+            if let destinationVC = segue.destinationViewController as? MessageViewController {
+                destinationVC.senderId = Device.DeviceId
+                destinationVC.senderDisplayName = Device.Username
+            }
+        }
+        
     }
 }
 
