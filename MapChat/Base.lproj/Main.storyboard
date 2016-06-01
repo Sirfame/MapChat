@@ -9,7 +9,7 @@
         <!--Settings-->
         <scene sceneID="zfD-C4-dkN">
             <objects>
-                <viewController title="Settings" id="DPW-6b-zCd" sceneMemberID="viewController">
+                <viewController title="Settings" id="DPW-6b-zCd" customClass="SettingsViewController" customModule="MapChat" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="fBr-57-Z0S"/>
                         <viewControllerLayoutGuide type="bottom" id="cnD-n1-20l"/>
@@ -18,14 +18,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="q80-2W-mhI">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="q80-2W-mhI">
                                 <rect key="frame" x="87" y="28" width="240" height="230"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="230" id="bVp-jv-Xdo"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="User Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Elr-vC-Lig">
-                                <rect key="frame" x="161" y="297" width="93" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="User Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Elr-vC-Lig">
+                                <rect key="frame" x="87" y="304" width="93" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="93" id="Gp2-d7-5tt"/>
                                     <constraint firstAttribute="height" constant="21" id="mAX-0A-kGd"/>
@@ -40,6 +40,9 @@
                                 <state key="normal" title="change profile pic">
                                     <color key="titleColor" red="0.59183781824248016" green="0.26036748774590041" blue="0.27860866285190533" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="ChangeProfilePic:" destination="DPW-6b-zCd" eventType="touchUpInside" id="ela-gm-CTK"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HVE-aH-EJ8">
                                 <rect key="frame" x="161" y="326" width="93" height="30"/>
@@ -51,7 +54,15 @@
                                 <state key="normal" title="change name">
                                     <color key="titleColor" red="0.59183781824248016" green="0.26036748774590041" blue="0.27860866285190533" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="ChangeUserName:" destination="DPW-6b-zCd" eventType="touchUpInside" id="oTr-Ur-2jv"/>
+                                </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="I5q-x9-a7b">
+                                <rect key="frame" x="202" y="300" width="125" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.51764705882352946" blue="0.52941176470588236" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -63,8 +74,6 @@
                             <constraint firstItem="q80-2W-mhI" firstAttribute="leading" secondItem="ZB7-jT-y53" secondAttribute="leadingMargin" constant="67" id="gcW-BJ-JyT"/>
                             <constraint firstItem="HVE-aH-EJ8" firstAttribute="centerX" secondItem="ZB7-jT-y53" secondAttribute="centerX" id="pmZ-ZJ-bwI"/>
                             <constraint firstItem="Elr-vC-Lig" firstAttribute="top" secondItem="6q9-nu-0mk" secondAttribute="bottom" constant="10" id="uNk-ug-nks"/>
-                            <constraint firstItem="Elr-vC-Lig" firstAttribute="centerX" secondItem="6q9-nu-0mk" secondAttribute="centerX" id="y05-35-cMj"/>
-                            <constraint firstItem="q80-2W-mhI" firstAttribute="centerX" secondItem="Elr-vC-Lig" secondAttribute="centerX" id="z4x-1N-Llo"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
@@ -76,6 +85,10 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <connections>
+                        <outlet property="UserNameLabel" destination="Elr-vC-Lig" id="NNG-s8-BeQ"/>
+                        <outlet property="textField" destination="I5q-x9-a7b" id="HM2-fq-caT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8bu-0j-jhf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

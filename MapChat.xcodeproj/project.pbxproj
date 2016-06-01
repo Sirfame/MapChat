@@ -17,6 +17,7 @@
 		9D80B22E1CEE891900A768C0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9D80B22C1CEE891900A768C0 /* GoogleService-Info.plist */; };
 		9D80B22F1CEE891900A768C0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9D80B22C1CEE891900A768C0 /* GoogleService-Info.plist */; };
 		9D8E16E01CF53A95003DDA84 /* AllChatsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8E16DF1CF53A95003DDA84 /* AllChatsTableViewCell.swift */; };
+		9DC74EEB1CFE770200B4CD91 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC74EEA1CFE770200B4CD91 /* SettingsViewController.swift */; };
 		9DC9577D1CEE78330086B700 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DC9577C1CEE78330086B700 /* MapKit.framework */; };
 		9DC9577F1CEE84F30086B700 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DC9577E1CEE84F30086B700 /* MessageUI.framework */; };
 		9DC957811CEE86240086B700 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DC957801CEE86240086B700 /* Social.framework */; };
@@ -62,6 +63,7 @@
 		94318915D88927847A20B00B /* Pods_MapChat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MapChat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D80B22C1CEE891900A768C0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9D8E16DF1CF53A95003DDA84 /* AllChatsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllChatsTableViewCell.swift; sourceTree = "<group>"; };
+		9DC74EEA1CFE770200B4CD91 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		9DC9577C1CEE78330086B700 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		9DC9577E1CEE84F30086B700 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		9DC957801CEE86240086B700 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
@@ -182,6 +184,7 @@
 				49D14FB21CF5221C001891B5 /* Device.swift */,
 				49BECD921CFBB0A0004574E9 /* MessageViewController.swift */,
 				49CC34F61CFBBBAD00A0ABD4 /* Message.swift */,
+				9DC74EEA1CFE770200B4CD91 /* SettingsViewController.swift */,
 			);
 			path = MapChat;
 			sourceTree = "<group>";
@@ -478,6 +481,7 @@
 				C5D5402D1CED84E5008A0A2C /* AppDelegate.swift in Sources */,
 				49CC34F71CFBBBAD00A0ABD4 /* Message.swift in Sources */,
 				49BECD931CFBB0A0004574E9 /* MessageViewController.swift in Sources */,
+				9DC74EEB1CFE770200B4CD91 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
