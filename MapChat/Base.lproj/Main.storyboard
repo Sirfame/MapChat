@@ -56,7 +56,7 @@
         <!--Chat Menu-->
         <scene sceneID="LL4-XW-7mA">
             <objects>
-                <viewController title="Chat Menu" id="k2Z-lM-Trt" sceneMemberID="viewController">
+                <viewController title="Chat Menu" id="k2Z-lM-Trt" customClass="AllChatsViewController" customModule="MapChat" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Zib-7f-dEC"/>
                         <viewControllerLayoutGuide type="bottom" id="q9N-kA-uqf"/>
@@ -97,6 +97,10 @@
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="k2Z-lM-Trt" id="eEt-EQ-Ssv"/>
+                                    <outlet property="delegate" destination="k2Z-lM-Trt" id="p0c-xr-eML"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.99215686274509807" blue="0.58039215686274515" alpha="1" colorSpace="calibratedRGB"/>

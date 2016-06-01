@@ -14,6 +14,7 @@ class ChatMenuTableViewController: UITableViewController {
     var ongoingConversations = [String]()
     
 
+    
     override func viewDidLoad() {
         
         super.viewDidLoad()
@@ -27,7 +28,6 @@ class ChatMenuTableViewController: UITableViewController {
         }
         
         loadDummyData()
-        
     }
 
     override func didReceiveMemoryWarning() {
