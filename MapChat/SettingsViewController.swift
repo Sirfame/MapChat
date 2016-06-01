@@ -10,10 +10,10 @@ import Foundation
 import UIKit
 import Firebase
 
-class SettingsViewController : UIViewController {
+class SettingsViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
-    var username = "ALYSSAAA TEST"
-    
+    //
+    let imagePicker = UIImagePickerController()
     var usersRef = Firebase(url: "https://mapchat-2d278.firebaseio.com/users/\(Device.DeviceId)")
     
     ///////////////////////////////////////////////////////////////////////////////////////////////
@@ -32,6 +32,9 @@ class SettingsViewController : UIViewController {
     // bttnChangeName - Button pressed when changing user's name.
     @IBOutlet weak var bttnChangeName: UIButton!
     
+    //
+    @IBOutlet weak var imgviewUserPic: UIImageView!
+    
     ///////////////////////////////////////////////////////////////////////////////////////////////
     // IBActions //////////////////////////////////////////////////////////////////////////////////
     ///////////////////////////////////////////////////////////////////////////////////////////////
@@ -39,7 +42,9 @@ class SettingsViewController : UIViewController {
     // changeUserPic - Executed upon clicking bttnChangePic; changes the user's pic.
     @IBAction func changeUserPic(sender: UIButton) {
         NSLog("Changing user pic.")
-        
+        imagePicker.allowsEditing = false
+        imagePicker.sourceType = .PhotoLibrary
+        presentViewController(imagePicker, animated: true, completion: nil)
     }
     
     // changeUserName - Executed upon clicking bttnChangeName; changes the user's name.
@@ -59,12 +64,25 @@ class SettingsViewController : UIViewController {
     }
     */
     override func viewDidLoad() {
-
+        super.viewDidLoad()
+        imagePicker.delegate = self
+        
     }
     
     func storeUsername() {
-        let username = ["username": self.username]
-        
-        usersRef.updateChildValues(username)
     }
+    
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+        if let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
+            imgviewUserPic.contentMode = .ScaleAspectFit
+            imgviewUserPic.image = pickedImage
+        }
+        
+        dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    func imagePickerControllerDidCancel(picker: UIImagePickerController) {
+        dismissViewControllerAnimated(true, completion: nil)
+    }
+    
 }
