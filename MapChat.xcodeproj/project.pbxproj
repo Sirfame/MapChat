@@ -144,6 +144,7 @@
 		49CC34FB1CFE781700A0ABD4 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
+				9DC74EEA1CFE770200B4CD91 /* SettingsViewController.swift */,
 			);
 			name = Settings;
 			sourceTree = "<group>";
@@ -226,10 +227,6 @@
 				C5D540331CED84E5008A0A2C /* Assets.xcassets */,
 				9D80B22C1CEE891900A768C0 /* GoogleService-Info.plist */,
 				C5D540381CED84E5008A0A2C /* Info.plist */,
-				49D14FB21CF5221C001891B5 /* Device.swift */,
-				49BECD921CFBB0A0004574E9 /* MessageViewController.swift */,
-				49CC34F61CFBBBAD00A0ABD4 /* Message.swift */,
-				9DC74EEA1CFE770200B4CD91 /* SettingsViewController.swift */,
 			);
 			path = MapChat;
 			sourceTree = "<group>";
