@@ -24,11 +24,18 @@
                                     <constraint firstAttribute="height" constant="230" id="bVp-jv-Xdo"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Elr-vC-Lig">
-                                <rect key="frame" x="161" y="279" width="93" height="21"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6q9-nu-0mk">
+                                <rect key="frame" x="117" y="266" width="181" height="30"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="12"/>
+                                <state key="normal" title="change profile pic">
+                                    <color key="titleColor" red="0.59183781824248016" green="0.26036748774590041" blue="0.27860866285190533" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="User Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Elr-vC-Lig">
+                                <rect key="frame" x="161" y="297" width="93" height="21"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="93" id="kuH-Nq-Myu"/>
-                                    <constraint firstAttribute="height" constant="21" id="lnq-Wn-At1"/>
+                                    <constraint firstAttribute="width" constant="93" id="Gp2-d7-5tt"/>
+                                    <constraint firstAttribute="height" constant="21" id="mAX-0A-kGd"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -37,10 +44,13 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.51764705882352946" blue="0.52941176470588236" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="Elr-vC-Lig" firstAttribute="top" secondItem="q80-2W-mhI" secondAttribute="bottom" constant="21" id="BPg-em-eah"/>
+                            <constraint firstItem="6q9-nu-0mk" firstAttribute="top" secondItem="q80-2W-mhI" secondAttribute="bottom" constant="8" id="7q7-h8-N4a"/>
+                            <constraint firstItem="Elr-vC-Lig" firstAttribute="top" secondItem="6q9-nu-0mk" secondAttribute="bottom" constant="1" id="9SI-62-jnL"/>
                             <constraint firstItem="q80-2W-mhI" firstAttribute="top" secondItem="fBr-57-Z0S" secondAttribute="bottom" constant="8" symbolic="YES" id="G3i-KL-P7h"/>
-                            <constraint firstItem="Elr-vC-Lig" firstAttribute="centerX" secondItem="ZB7-jT-y53" secondAttribute="centerX" id="XHt-tg-ng4"/>
+                            <constraint firstItem="6q9-nu-0mk" firstAttribute="centerX" secondItem="ZB7-jT-y53" secondAttribute="centerX" id="cQh-QS-9Mf"/>
                             <constraint firstItem="q80-2W-mhI" firstAttribute="leading" secondItem="ZB7-jT-y53" secondAttribute="leadingMargin" constant="67" id="gcW-BJ-JyT"/>
+                            <constraint firstItem="Elr-vC-Lig" firstAttribute="top" secondItem="6q9-nu-0mk" secondAttribute="bottom" constant="10" id="uNk-ug-nks"/>
+                            <constraint firstItem="Elr-vC-Lig" firstAttribute="centerX" secondItem="6q9-nu-0mk" secondAttribute="centerX" id="y05-35-cMj"/>
                             <constraint firstItem="q80-2W-mhI" firstAttribute="centerX" secondItem="Elr-vC-Lig" secondAttribute="centerX" id="z4x-1N-Llo"/>
                         </constraints>
                     </view>
