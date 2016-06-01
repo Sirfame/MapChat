@@ -6,13 +6,13 @@
 //  Copyright © 2016 Neward's Favs. All rights reserved.
 //
 
-// ChatTableViewCell: Handles the cells of the TableView in the Chat screen.
+// AllChatTableViewCell: Handles the cells of the TableView in the Chat screen.
 
 import UIKit
 
-class ChatTableViewCell: UITableViewCell {
+class AllChatTableViewCell: UITableViewCell {
 
-    // lblMessage: The message of the cell.
+    @IBOutlet weak var lblUser: UILabel!
     @IBOutlet weak var lblMessage: UILabel!
     
     override func awakeFromNib() {

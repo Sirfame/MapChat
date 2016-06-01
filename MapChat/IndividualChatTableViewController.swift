@@ -12,6 +12,7 @@ class ChatMenuTableViewController: UITableViewController {
     
     // ongoingConversations: An array of Strings indicating the latest message of each conversation.
     var ongoingConversations = [String]()
+    
 
     override func viewDidLoad() {
         

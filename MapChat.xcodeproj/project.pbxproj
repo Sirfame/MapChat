@@ -20,8 +20,8 @@
 		9DC9577D1CEE78330086B700 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DC9577C1CEE78330086B700 /* MapKit.framework */; };
 		9DC9577F1CEE84F30086B700 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DC9577E1CEE84F30086B700 /* MessageUI.framework */; };
 		9DC957811CEE86240086B700 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DC957801CEE86240086B700 /* Social.framework */; };
-		9DE807831CF51E7600FE3222 /* SettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE807821CF51E7600FE3222 /* SettingsTableViewCell.swift */; };
 		9DE807851CF5251D00FE3222 /* IndividualChatTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE807841CF5251D00FE3222 /* IndividualChatTableViewController.swift */; };
+		9DE941421CFE55F400642800 /* AllChatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE941411CFE55F400642800 /* AllChatsViewController.swift */; };
 		C5D5402D1CED84E5008A0A2C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5D5402C1CED84E5008A0A2C /* AppDelegate.swift */; };
 		C5D5402F1CED84E5008A0A2C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5D5402E1CED84E5008A0A2C /* ViewController.swift */; };
 		C5D540321CED84E5008A0A2C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5D540301CED84E5008A0A2C /* Main.storyboard */; };
@@ -65,8 +65,8 @@
 		9DC9577C1CEE78330086B700 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		9DC9577E1CEE84F30086B700 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		9DC957801CEE86240086B700 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
-		9DE807821CF51E7600FE3222 /* SettingsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTableViewCell.swift; sourceTree = "<group>"; };
 		9DE807841CF5251D00FE3222 /* IndividualChatTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IndividualChatTableViewController.swift; sourceTree = "<group>"; };
+		9DE941411CFE55F400642800 /* AllChatsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllChatsViewController.swift; sourceTree = "<group>"; };
 		AB26D9F16A3974DBA2716CB6 /* Pods-MapChatUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MapChatUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MapChatUITests/Pods-MapChatUITests.release.xcconfig"; sourceTree = "<group>"; };
 		B510C394ABE9858847B3590C /* Pods-MapChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MapChat.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MapChat/Pods-MapChat.debug.xcconfig"; sourceTree = "<group>"; };
 		C5D540291CED84E5008A0A2C /* MapChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MapChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -174,8 +174,8 @@
 				C5D5402E1CED84E5008A0A2C /* ViewController.swift */,
 				9DE807841CF5251D00FE3222 /* IndividualChatTableViewController.swift */,
 				C5D540301CED84E5008A0A2C /* Main.storyboard */,
+				9DE941411CFE55F400642800 /* AllChatsViewController.swift */,
 				9D8E16DF1CF53A95003DDA84 /* AllChatsTableViewCell.swift */,
-				9DE807821CF51E7600FE3222 /* SettingsTableViewCell.swift */,
 				C5D540331CED84E5008A0A2C /* Assets.xcassets */,
 				C5D540351CED84E5008A0A2C /* LaunchScreen.storyboard */,
 				C5D540381CED84E5008A0A2C /* Info.plist */,
@@ -472,11 +472,11 @@
 			files = (
 				49D14FB31CF5221C001891B5 /* Device.swift in Sources */,
 				9DE807851CF5251D00FE3222 /* IndividualChatTableViewController.swift in Sources */,
+				9DE941421CFE55F400642800 /* AllChatsViewController.swift in Sources */,
 				C5D5402F1CED84E5008A0A2C /* ViewController.swift in Sources */,
 				9D8E16E01CF53A95003DDA84 /* AllChatsTableViewCell.swift in Sources */,
 				C5D5402D1CED84E5008A0A2C /* AppDelegate.swift in Sources */,
 				49CC34F71CFBBBAD00A0ABD4 /* Message.swift in Sources */,
-				9DE807831CF51E7600FE3222 /* SettingsTableViewCell.swift in Sources */,
 				49BECD931CFBB0A0004574E9 /* MessageViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
