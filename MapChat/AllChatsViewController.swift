@@ -38,7 +38,7 @@ class AllChatsViewController : UIViewController, UITableViewDataSource {
     
     // There is one section in the table view.
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 0
+        return 1
     }
     
     // The table has as many rows as there are convorsations in the convoArray.
@@ -47,9 +47,16 @@ class AllChatsViewController : UIViewController, UITableViewDataSource {
     }
     
     // Creates and configures cells to populate the convorsation table view.
-    func tableView(_ tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cellIdentifier = "AllChatsTableViewCell"
+        
         let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! AllChatsTableViewCell
+        
+        let convo = convoArray[indexPath.row]
+        
+        cell.lblUser.text = convo.username
+        
+        cell.lblMessage.text = convo.message
         return cell
     }
 
