@@ -85,4 +85,23 @@ public class Device {
         get {return _currentChatBuddyID}
         set(value) {_currentChatBuddyID = value}
     }
+    
+    private static var _username : String = ""
+    public static var Username : String {
+        get {
+            if _username == "" {
+                return "Anonymous"
+            } else {
+                return _username
+            }
+        }
+        set(value) {_username = value}
+    }
+    
+    private static var _currChatId : String = ""
+    
+    public static var CurrChatId : String {
+        get {return _currChatId}
+        set(value) {_currChatId = value}
+    }
 }

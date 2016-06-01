@@ -1,17 +1,20 @@
 //
-//  SettingsTableViewCell.swift
+//  AllChatsTableViewCell.swift
 //  MapChat
 //
 //  Created by iGuest on 5/24/16.
 //  Copyright © 2016 Neward's Favs. All rights reserved.
 //
 
-// SettingsTableViewCell: Handles the cells of the TableView in the Settings view.
+// AllChatTableViewCell: Handles the cells of the TableView in the Chat screen.
 
 import UIKit
 
-class SettingsTableViewCell: UITableViewCell {
+class AllChatsTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var lblUser: UILabel!
+    @IBOutlet weak var lblMessage: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
     }

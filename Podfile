@@ -3,14 +3,15 @@
 
 target 'MapChat' do
   # Comment this line if you're not using Swift and don't want to use dynamic frameworks
-  use_frameworks!
-
-  # Pods for MapChat
-pod 'Firebase', '~> 2.1'
 
 use_frameworks!
 
+# Pods for MapChat
+pod 'Firebase', '~> 2.1'
+
 pod 'GeoFire', '>= 1.1'
+
+pod 'JSQMessagesViewController'
 
   target 'MapChatTests' do
     inherit! :search_paths
