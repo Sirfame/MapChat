@@ -41,7 +41,7 @@
                                     <color key="titleColor" red="0.59183781824248016" green="0.26036748774590041" blue="0.27860866285190533" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="ChangeProfilePic:" destination="DPW-6b-zCd" eventType="touchUpInside" id="ela-gm-CTK"/>
+                                    <action selector="changeUserPic:" destination="DPW-6b-zCd" eventType="touchUpInside" id="Jss-21-1DJ"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HVE-aH-EJ8">
@@ -55,7 +55,7 @@
                                     <color key="titleColor" red="0.59183781824248016" green="0.26036748774590041" blue="0.27860866285190533" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="ChangeUserName:" destination="DPW-6b-zCd" eventType="touchUpInside" id="oTr-Ur-2jv"/>
+                                    <action selector="changeUserName:" destination="DPW-6b-zCd" eventType="touchUpInside" id="Kly-0L-IgF"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="I5q-x9-a7b">
@@ -98,7 +98,11 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
                         <outlet property="UserNameLabel" destination="Elr-vC-Lig" id="NNG-s8-BeQ"/>
+                        <outlet property="bttnChangeName" destination="HVE-aH-EJ8" id="Byh-ZB-k2a"/>
+                        <outlet property="bttnChangePic" destination="6q9-nu-0mk" id="imB-7t-uoG"/>
+                        <outlet property="lblUserName" destination="Elr-vC-Lig" id="NKC-0u-s3N"/>
                         <outlet property="textField" destination="I5q-x9-a7b" id="HM2-fq-caT"/>
+                        <outlet property="txtfldUserName" destination="I5q-x9-a7b" id="jGE-GU-UzF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8bu-0j-jhf" userLabel="First Responder" sceneMemberID="firstResponder"/>
