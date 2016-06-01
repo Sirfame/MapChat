@@ -173,12 +173,20 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Chat" id="TSD-Cx-4eD"/>
                     <connections>
-                        <segue destination="XEl-YC-Fdx" kind="show" id="NhO-ZL-e5h"/>
+                        <segue destination="KaU-la-CI7" kind="show" id="aly-Tj-oeB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wxD-sp-1wq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="908" y="679"/>
+            <point key="canvasLocation" x="842" y="669"/>
+        </scene>
+        <!--Message View Controller-->
+        <scene sceneID="Qmc-SX-svT">
+            <objects>
+                <viewController id="KaU-la-CI7" customClass="MessageViewController" customModule="MapChat" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RUj-I9-a3g" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2127" y="-309"/>
         </scene>
         <!--Map-->
         <scene sceneID="nKd-rS-A3b">
@@ -264,7 +272,7 @@
                         <outlet property="lblRadius" destination="ps8-v6-QSH" id="51g-y2-aHd"/>
                         <outlet property="mapView" destination="g2f-LV-rzU" id="6Nf-lj-wOg"/>
                         <outlet property="sliderRadiusSlider" destination="kdP-D7-Tym" id="Un8-cF-ayV"/>
-                        <segue destination="XEl-YC-Fdx" kind="show" identifier="chatsegue" id="yOA-5X-84Y"/>
+                        <segue destination="KaU-la-CI7" kind="show" identifier="GoToChat" id="8Ra-yy-4E4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gb9-yR-elD" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -371,7 +379,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="NhO-ZL-e5h"/>
+        <segue reference="8Ra-yy-4E4"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
 </document>

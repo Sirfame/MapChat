@@ -87,8 +87,21 @@ public class Device {
     }
     
     private static var _username : String = ""
-    public static var username : String {
-        get {return _username}
+    public static var Username : String {
+        get {
+            if _username == "" {
+                return "Anonymous"
+            } else {
+                return _username
+            }
+        }
         set(value) {_username = value}
+    }
+    
+    private static var _currChat : String = ""
+    
+    public static var CurrChat : String {
+        get {return _currChat}
+        set(value) {_currChat = value}
     }
 }
