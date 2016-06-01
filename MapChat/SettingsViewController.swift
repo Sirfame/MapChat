@@ -12,9 +12,15 @@ import Firebase
 
 class SettingsViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
-    //
+    // imagePicker - The ImagePickerController; picks images.
     let imagePicker = UIImagePickerController()
+    //
     var usersRef = Firebase(url: "https://mapchat-2d278.firebaseio.com/users/\(Device.DeviceId)")
+    
+    
+    // Ran into a bug here, deleted contents.
+    func storeUsername() {
+    }
     
     ///////////////////////////////////////////////////////////////////////////////////////////////
     // IBOutlets //////////////////////////////////////////////////////////////////////////////////
@@ -32,7 +38,7 @@ class SettingsViewController: UIViewController, UIImagePickerControllerDelegate,
     // bttnChangeName - Button pressed when changing user's name.
     @IBOutlet weak var bttnChangeName: UIButton!
     
-    //
+    // imgviewUserPic - The user's pic.
     @IBOutlet weak var imgviewUserPic: UIImageView!
     
     ///////////////////////////////////////////////////////////////////////////////////////////////
@@ -45,6 +51,7 @@ class SettingsViewController: UIViewController, UIImagePickerControllerDelegate,
         imagePicker.allowsEditing = false
         imagePicker.sourceType = .PhotoLibrary
         presentViewController(imagePicker, animated: true, completion: nil)
+        //
     }
     
     // changeUserName - Executed upon clicking bttnChangeName; changes the user's name.
@@ -55,6 +62,10 @@ class SettingsViewController: UIViewController, UIImagePickerControllerDelegate,
         lblUserName.text = newName
     }
     
+    ///////////////////////////////////////////////////////////////////////////////////////////////
+    // didReceiveMemoryWarning ////////////////////////////////////////////////////////////////////
+    ///////////////////////////////////////////////////////////////////////////////////////////////
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
@@ -63,24 +74,31 @@ class SettingsViewController: UIViewController, UIImagePickerControllerDelegate,
         self.textField.resignFirstResponder()
     }
     */
+    
+    ///////////////////////////////////////////////////////////////////////////////////////////////
+    // viewDidLoad ////////////////////////////////////////////////////////////////////////////////
+    ///////////////////////////////////////////////////////////////////////////////////////////////
+
     override func viewDidLoad() {
         super.viewDidLoad()
         imagePicker.delegate = self
-        
     }
     
-    func storeUsername() {
-    }
+    ///////////////////////////////////////////////////////////////////////////////////////////////
+    // imagePicker ////////////////////////////////////////////////////////////////////////////////
+    ///////////////////////////////////////////////////////////////////////////////////////////////
     
+    // imagePickerController - Handles the presentation of the imagePickerController.
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
         if let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
             imgviewUserPic.contentMode = .ScaleAspectFit
             imgviewUserPic.image = pickedImage
+            // CODE TO RECEIVE pickedImage AND SEND TO FIREBASE HERE
         }
-        
         dismissViewControllerAnimated(true, completion: nil)
     }
     
+    //
     func imagePickerControllerDidCancel(picker: UIImagePickerController) {
         dismissViewControllerAnimated(true, completion: nil)
     }
