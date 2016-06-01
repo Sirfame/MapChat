@@ -12,12 +12,13 @@ import UIKit
 class AllChatsViewController : UIViewController {
     
     override func viewDidLoad() {
-        var tupleArray: [(username: String, message: String)] = [("USERNAME", "MESSAGE")]
+        //
+        var convoArray: [(username: String, message: String)] = [("USERNAME", "MESSAGE")]
         func injectDummyData() {
-            tupleArray.append((username: "Chris", message: "wadup fam"))
-            tupleArray.append((username: "Joel", message: "help swift is killing me"))
-            tupleArray.append((username: "Sirfame", message: "yolo"))
-            tupleArray.append((username: "Alyssa", message: "hi peeps"))
+            convoArray.append((username: "Chris", message: "wadup fam"))
+            convoArray.append((username: "Joel", message: "help swift is killing me"))
+            convoArray.append((username: "Sirfame", message: "yolo"))
+            convoArray.append((username: "Alyssa", message: "hi peeps"))
         }
         injectDummyData()
     }
