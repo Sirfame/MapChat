@@ -62,7 +62,7 @@ class SettingsViewController: UIViewController, UIImagePickerControllerDelegate,
 //        }) REMOVE THIS LATERRRRRR
         let usernameRef = usersRef.childByAppendingPath("\(Device.DeviceId)").childByAppendingPath("username")
         usernameRef.setValue(newName)
-        
+	
         // CODE TO SEND newName TO FIREBASE HERE
         // May want to verify if names are already taken. I think it's something Neward would
         // try to trip us up.
@@ -83,6 +83,14 @@ class SettingsViewController: UIViewController, UIImagePickerControllerDelegate,
     override func viewDidLoad() {
         super.viewDidLoad()
         imagePicker.delegate = self
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
+        view.addGestureRecognizer(tap)
+    }
+    
+    //Calls this function when the tap is recognized.
+    func dismissKeyboard() {
+        //Causes the view (or one of its embedded text fields) to resign the first responder status.
+        view.endEditing(true)
     }
     
     ///////////////////////////////////////////////////////////////////////////////////////////////
@@ -96,6 +104,9 @@ class SettingsViewController: UIViewController, UIImagePickerControllerDelegate,
             imgviewUserPic.contentMode = .ScaleAspectFit
             imgviewUserPic.image = pickedImage
             // CODE TO SEND pickedImage TO FIREBASE HERE
+            let img = ["image": "testImage"]
+            let imageRef = usersRef.childByAppendingPath("\(Device.DeviceId)").childByAppendingPath("image")
+            imageRef.setValue(img)
         }
         dismissViewControllerAnimated(true, completion: nil)
     }
