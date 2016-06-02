@@ -99,14 +99,18 @@ class SettingsViewController: UIViewController, UIImagePickerControllerDelegate,
     
     // imagePickerController - Handles the presentation of the imagePickerController; sets
     // imgViewUserPic to the image selected in the imagePickerController.
+    
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
         if let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
             imgviewUserPic.contentMode = .ScaleAspectFit
             imgviewUserPic.image = pickedImage
-            // CODE TO SEND pickedImage TO FIREBASE HERE
-            let img = ["image": "testImage"]
+            
+            let imageData:NSData = UIImagePNGRepresentation(pickedImage)!
+            let base64String:String = imageData.base64EncodedStringWithOptions(.Encoding64CharacterLineLength)
+            let img = ["image": base64String]
             let imageRef = usersRef.childByAppendingPath("\(Device.DeviceId)").childByAppendingPath("image")
-            imageRef.setValue(img)
+            imageRef.updateChildValues(img)
+            NSLog("Image upload success")
         }
         dismissViewControllerAnimated(true, completion: nil)
     }
