@@ -54,6 +54,15 @@ class SettingsViewController: UIViewController, UIImagePickerControllerDelegate,
         let newName = txtfldUserName.text
         NSLog("New name: \(newName)")
         lblUserName.text = newName
+        print(Device.DeviceId)
+//        usersRef.observeEventType(.Value, withBlock: { snapshot in
+//            print(snapshot.value)
+//            }, withCancelBlock: { error in
+//                print(error.description)
+//        }) REMOVE THIS LATERRRRRR
+        let usernameRef = usersRef.childByAppendingPath("\(Device.DeviceId)").childByAppendingPath("username")
+        usernameRef.setValue(newName)
+        
         // CODE TO SEND newName TO FIREBASE HERE
         // May want to verify if names are already taken. I think it's something Neward would
         // try to trip us up.
