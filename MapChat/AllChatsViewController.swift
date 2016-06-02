@@ -16,8 +16,11 @@ class AllChatsViewController : UIViewController, UITableViewDataSource {
     
     var usersRef = Firebase(url: "https://mapchat-2d278.firebaseio.com/users")
     
+    var deviceRef = Firebase(url: "https://mapchat-2d278.firebaseio.com/chats")
     
     var displayIds: [String] = []
+    
+    var displayNames: [String] = []
     
     var chats: [String] = []
     
@@ -71,7 +74,27 @@ class AllChatsViewController : UIViewController, UITableViewDataSource {
         
         let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! AllChatsTableViewCell
         
-        cell.lblUser.text = displayIds[indexPath.row]
+        var testRef = self.deviceRef.childByAppendingPath("\(displayIds[indexPath.row])").childByAppendingPath("deviceID1")
+        testRef.observeEventType(.Value, withBlock: { snapshot in
+            NSLog("ID1: \(snapshot.value)")
+            if(Device.DeviceId != snapshot.value as! String) {
+                let usernameRef = self.usersRef.childByAppendingPath("\(snapshot.value as! String)").childByAppendingPath("username")
+                usernameRef.observeEventType(.Value, withBlock: { snapshot in
+                    cell.lblUser.text = snapshot.value as? String
+                })
+            }
+        })
+        testRef = self.deviceRef.childByAppendingPath("\(displayIds[indexPath.row])").childByAppendingPath("deviceID2")
+        testRef.observeEventType(.Value, withBlock: { snapshot in
+            NSLog("ID2: \(snapshot.value)")
+            if(Device.DeviceId != snapshot.value as! String) {
+                let usernameRef = self.usersRef.childByAppendingPath("\(snapshot.value as! String)").childByAppendingPath("username")
+                usernameRef.observeEventType(.Value, withBlock: { snapshot in
+                    cell.lblUser.text = snapshot.value as? String
+                })
+            }
+        })
+        //cell.lblUser.text = displayIds[indexPath.row]
         return cell
     }
     
@@ -91,8 +114,9 @@ class AllChatsViewController : UIViewController, UITableViewDataSource {
         var chatsRef = usersRef
         chatsRef = chatsRef.childByAppendingPath("\(Device.DeviceId)").childByAppendingPath("chats")
         NSLog("inside get chat data")
+
         chatsRef.observeEventType(.ChildAdded, withBlock: { snapshot in
-            NSLog("\(snapshot.key)")
+            NSLog("First: \(snapshot.value)")
             self.chats.append(snapshot.key)
             self.displayIds = self.chats
             self.chatTableView.reloadData()
