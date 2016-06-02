@@ -58,7 +58,19 @@ class MessageViewController : JSQMessagesViewController {
     
     override func didPressSendButton(button: UIButton!, withMessageText text: String!, senderId: String!, senderDisplayName: String!, date: NSDate!) {
         let itemRef = messageRef.childByAutoId()
+        let messageItem = [ // 2
+            "message": text,
+            "sender": senderDisplayName,
+            "senderId": senderId
+        ]
+        itemRef.setValue(messageItem) // 3
+        // 4
+        JSQSystemSoundPlayer.jsq_playMessageSentSound()
+        
+        // 5
+        finishSendingMessage()
     }
+    
     
     private func setupBubbles() {
         let factory = JSQMessagesBubbleImageFactory()
@@ -71,10 +83,23 @@ class MessageViewController : JSQMessagesViewController {
         messages.append(message)
     }
     
-    func getMessages() {
-        
+    private func getMessages() {
+        // 1
+        let messagesQuery = messageRef.queryLimitedToLast(25)
+        // 2
+        messagesQuery.observeEventType(.ChildAdded) { (snapshot: FDataSnapshot!) in
+            // 3
+            let id = snapshot.value["senderId"] as! String
+            let name = snapshot.value["sender"] as! String
+            let text = snapshot.value["message"] as! String
+            
+            // 4
+            self.addMessage(id, displayName: name, text: text)
+            
+            // 5
+            self.finishReceivingMessage()
+        }
     }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Chat"
@@ -82,16 +107,18 @@ class MessageViewController : JSQMessagesViewController {
         collectionView!.collectionViewLayout.incomingAvatarViewSize = CGSizeZero
         collectionView!.collectionViewLayout.outgoingAvatarViewSize = CGSizeZero
         
-        messageRef = rootRef.childByAppendingPath("messages/\(self.chatId)")
+        messageRef = rootRef.childByAppendingPath("messages").childByAppendingPath("\(Device.CurrChatId)")
     }
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         
-        addMessage("hi", displayName: "Alyssa", text: "Hi thereee")
-        
-        addMessage(senderId, displayName: "Alyssa", text: "Hi thereee")
-        finishReceivingMessage()
+        getMessages()
+//        
+//        addMessage("hi", displayName: "Alyssa", text: "Hi thereee")
+//        
+//        addMessage(senderId, displayName: "Alyssa", text: "Hi thereee")
+//        finishReceivingMessage()
     }
 
 }

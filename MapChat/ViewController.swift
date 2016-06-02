@@ -158,7 +158,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
             
             let firstMessage = [
                 "sender" : Device.Username,
-                "message" : "Hello there new friend!"
+                "message" : "Hello there new friend!",
+                "senderId" : Device.DeviceId
              ]
             
             let newMessageRef = messageRef.childByAutoId()

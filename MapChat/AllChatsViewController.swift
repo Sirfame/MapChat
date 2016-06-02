@@ -81,6 +81,8 @@ class AllChatsViewController : UIViewController, UITableViewDataSource {
         let row = indexPath.row
         
         NSLog(self.displayIds[row])
+        
+        Device.CurrChatId = self.displayIds[row]
         performSegueWithIdentifier("IndividualChatSegue", sender: self)
         
     }
@@ -102,7 +104,6 @@ class AllChatsViewController : UIViewController, UITableViewDataSource {
             if let destinationVC = segue.destinationViewController as? MessageViewController {
                 destinationVC.senderId = Device.DeviceId
                 destinationVC.senderDisplayName = Device.Username
-                //Device.CurrChatId =
             }
         }
     }
