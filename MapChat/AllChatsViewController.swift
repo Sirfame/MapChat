@@ -8,29 +8,38 @@
 
 import Foundation
 import UIKit
+import Firebase
 
 // AllChatsViewController - Controls the ChatMenu, containing all running chats.
 
 class AllChatsViewController : UIViewController, UITableViewDataSource {
     
-    // convoArray - An array of tuples containing the username and the latest message of the
-    // conversation with said user.
-    var convoArray: [(username: String, message: String)] = [("USERNAME", "MESSAGE")]
+    var usersRef = Firebase(url: "https://mapchat-2d278.firebaseio.com/users")
+    
+    
+    var displayIds: [String] = []
+    
+    var chats: [String] = []
+    
+    @IBOutlet weak var chatTableView: UITableView!
     
     ///////////////////////////////////////////////////////////////////////////////////////////////
     // VIEWDIDLOAD ////////////////////////////////////////////////////////////////////////////////
     ///////////////////////////////////////////////////////////////////////////////////////////////
     
+
+    
     override func viewDidLoad() {
-        
-        // Injects dummy data for testing purposes.
-        func injectDummyData() {
-            convoArray.append((username: "Chris", message: "wadup fam"))
-            convoArray.append((username: "Joel", message: "help swift is killing me"))
-            convoArray.append((username: "Sirfame", message: "yolo"))
-            convoArray.append((username: "Alyssa", message: "hi peeps"))
-        }
-        injectDummyData()
+        super.viewDidLoad()
+//        // Injects dummy data for testing purposes.
+//        func injectDummyData() {
+//            convoArray.append((username: "Chris", message: "wadup fam"))
+//            convoArray.append((username: "Joel", message: "help swift is killing me"))
+//            convoArray.append((username: "Sirfame", message: "yolo"))
+//            convoArray.append((username: "Alyssa", message: "hi peeps"))
+//        }
+//        injectDummyData()
+        getChatData()
         
     }
     
@@ -53,7 +62,7 @@ class AllChatsViewController : UIViewController, UITableViewDataSource {
     
     // The table has as many rows as there are convorsations in the convoArray.
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return convoArray.count
+        return chats.count
     }
     
     // Creates and configures cells to populate the convorsation table view.
@@ -62,13 +71,39 @@ class AllChatsViewController : UIViewController, UITableViewDataSource {
         
         let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! AllChatsTableViewCell
         
-        let convo = convoArray[indexPath.row]
-        
-        cell.lblUser.text = convo.username
-        
-        cell.lblMessage.text = convo.message
+        cell.lblUser.text = displayIds[indexPath.row]
         return cell
     }
-
     
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        
+        let row = indexPath.row
+        
+        NSLog(self.displayIds[row])
+        performSegueWithIdentifier("IndividualChatSegue", sender: self)
+        
+    }
+    
+    func getChatData() {
+        var chatsRef = usersRef
+        chatsRef = chatsRef.childByAppendingPath("\(Device.DeviceId)").childByAppendingPath("chats")
+        NSLog("inside get chat data")
+        chatsRef.observeEventType(.ChildAdded, withBlock: { snapshot in
+            NSLog("\(snapshot.key)")
+            self.chats.append(snapshot.key)
+            self.displayIds = self.chats
+            self.chatTableView.reloadData()
+        })
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "IndividualChatSegue" {
+            if let destinationVC = segue.destinationViewController as? MessageViewController {
+                destinationVC.senderId = Device.DeviceId
+                destinationVC.senderDisplayName = Device.Username
+                //Device.CurrChatId =
+            }
+        }
+    }
 }

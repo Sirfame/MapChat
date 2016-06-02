@@ -17,15 +17,6 @@ class SettingsViewController: UIViewController, UIImagePickerControllerDelegate,
     
     var usersRef = Firebase(url: "https://mapchat-2d278.firebaseio.com/users/\(Device.DeviceId)")
     
-    // Ran into a bug here, deleted contents. Kept function in case you need to use it later.
-    func storeUsername() {
-    }
-    
-    /*func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
-     self.textField.resignFirstResponder()
-     }
-     */
-    
     ///////////////////////////////////////////////////////////////////////////////////////////////
     // IBOutlets //////////////////////////////////////////////////////////////////////////////////
     ///////////////////////////////////////////////////////////////////////////////////////////////
