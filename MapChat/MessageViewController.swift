@@ -12,7 +12,8 @@ import JSQMessagesViewController
 import Firebase
 
 class MessageViewController : JSQMessagesViewController {
-    let chatId = "Test2"
+    var usersRef = Firebase(url: "https://mapchat-2d278.firebaseio.com/messages")
+    
     let rootRef = Firebase(url: "https://mapchat-2d278.firebaseio.com")
     var messageRef: Firebase!
     
@@ -68,6 +69,10 @@ class MessageViewController : JSQMessagesViewController {
     func addMessage(id : String, displayName: String, text: String) {
         let message = JSQMessage(senderId: id, displayName: displayName, text: text)
         messages.append(message)
+    }
+    
+    func getMessages() {
+        
     }
     
     override func viewDidLoad() {
