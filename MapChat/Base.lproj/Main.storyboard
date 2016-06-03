@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="OGi-rt-BSq">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="OGi-rt-BSq">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -142,15 +142,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="687"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="HbM-Cz-tgw">
-                                <rect key="frame" x="20" y="24" width="374" height="553"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="HbM-Cz-tgw">
+                                <rect key="frame" x="20" y="86" width="374" height="579"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AllChatsTableViewCell" id="Uok-sD-Xfe" customClass="AllChatsTableViewCell" customModule="MapChat" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="92" width="374" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Uok-sD-Xfe" id="mgt-t6-ctd">
-                                            <rect key="frame" x="0.0" y="0.0" width="374" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i1R-dE-inQ">
@@ -201,11 +201,22 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.99215686274509807" blue="0.58039215686274515" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="q9N-kA-uqf" firstAttribute="top" secondItem="HbM-Cz-tgw" secondAttribute="bottom" constant="22" id="0H7-ae-kTE"/>
                             <constraint firstItem="HbM-Cz-tgw" firstAttribute="centerY" secondItem="xqD-NE-LRe" secondAttribute="centerY" id="LtE-e0-Yes"/>
-                            <constraint firstItem="HbM-Cz-tgw" firstAttribute="leading" secondItem="xqD-NE-LRe" secondAttribute="leadingMargin" id="UqE-6z-uZ9"/>
-                            <constraint firstItem="HbM-Cz-tgw" firstAttribute="top" secondItem="Zib-7f-dEC" secondAttribute="bottom" constant="4" id="nws-xv-BWs"/>
+                            <constraint firstItem="HbM-Cz-tgw" firstAttribute="leading" secondItem="xqD-NE-LRe" secondAttribute="leadingMargin" id="WOc-wY-Z6H"/>
+                            <constraint firstItem="HbM-Cz-tgw" firstAttribute="top" secondItem="Zib-7f-dEC" secondAttribute="bottom" constant="22" id="hgd-Gm-24O"/>
+                            <constraint firstItem="q9N-kA-uqf" firstAttribute="top" secondItem="HbM-Cz-tgw" secondAttribute="bottom" constant="10" id="p45-8d-6cC"/>
+                            <constraint firstItem="HbM-Cz-tgw" firstAttribute="centerX" secondItem="xqD-NE-LRe" secondAttribute="centerX" id="rII-Wg-4i8"/>
+                            <constraint firstItem="HbM-Cz-tgw" firstAttribute="centerY" secondItem="xqD-NE-LRe" secondAttribute="centerY" id="wwy-Tq-zRc"/>
                             <constraint firstItem="HbM-Cz-tgw" firstAttribute="centerX" secondItem="xqD-NE-LRe" secondAttribute="centerX" id="z0S-p1-pPs"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="LtE-e0-Yes"/>
+                                <exclude reference="wwy-Tq-zRc"/>
+                                <exclude reference="p45-8d-6cC"/>
+                            </mask>
+                        </variation>
                     </view>
                     <tabBarItem key="tabBarItem" title="Chat" id="TSD-Cx-4eD"/>
                     <navigationItem key="navigationItem" id="WKZ-au-rAY"/>
@@ -337,7 +348,7 @@
                                         <rect key="frame" x="0.0" y="28" width="374" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="zVF-1C-QKP" id="i9m-hy-4u6">
-                                            <rect key="frame" x="0.0" y="0.0" width="374" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="User" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qax-6E-1nX">
