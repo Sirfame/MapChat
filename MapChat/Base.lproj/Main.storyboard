@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="OGi-rt-BSq">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="OGi-rt-BSq">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -24,28 +24,14 @@
                                     <constraint firstAttribute="height" constant="230" id="bVp-jv-Xdo"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6q9-nu-0mk">
-                                <rect key="frame" x="117" y="266" width="181" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6q9-nu-0mk">
+                                <rect key="frame" x="142" y="266" width="131" height="28"/>
                                 <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="12"/>
                                 <state key="normal" title="change profile pic">
                                     <color key="titleColor" red="0.59183781824248016" green="0.26036748774590041" blue="0.27860866285190533" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="changeUserPic:" destination="DPW-6b-zCd" eventType="touchUpInside" id="Jss-21-1DJ"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HVE-aH-EJ8">
-                                <rect key="frame" x="161" y="391" width="93" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="93" id="12P-Zp-OZe"/>
-                                    <constraint firstAttribute="height" constant="30" id="iib-c4-Yfu"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="12"/>
-                                <state key="normal" title="change name">
-                                    <color key="titleColor" red="0.59183781824248016" green="0.26036748774590041" blue="0.27860866285190533" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="changeUserName:" destination="DPW-6b-zCd" eventType="touchUpInside" id="Kly-0L-IgF"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="I5q-x9-a7b">
@@ -67,6 +53,20 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HVE-aH-EJ8">
+                                <rect key="frame" x="161" y="383" width="93" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="93" id="12P-Zp-OZe"/>
+                                    <constraint firstAttribute="height" constant="30" id="iib-c4-Yfu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="12"/>
+                                <state key="normal" title="change name">
+                                    <color key="titleColor" red="0.59183781824248016" green="0.26036748774590041" blue="0.27860866285190533" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="changeUserName:" destination="DPW-6b-zCd" eventType="touchUpInside" id="Kly-0L-IgF"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.51764705882352946" blue="0.52941176470588236" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -79,8 +79,8 @@
                             <constraint firstItem="HVE-aH-EJ8" firstAttribute="top" secondItem="Elr-vC-Lig" secondAttribute="bottom" constant="10" id="X7C-SH-l5p"/>
                             <constraint firstItem="Elr-vC-Lig" firstAttribute="centerX" secondItem="q80-2W-mhI" secondAttribute="centerX" id="aju-sN-DgY"/>
                             <constraint firstItem="6q9-nu-0mk" firstAttribute="centerX" secondItem="ZB7-jT-y53" secondAttribute="centerX" id="cQh-QS-9Mf"/>
-                            <constraint firstItem="q80-2W-mhI" firstAttribute="leading" secondItem="ZB7-jT-y53" secondAttribute="leadingMargin" constant="67" id="gcW-BJ-JyT"/>
                             <constraint firstItem="Elr-vC-Lig" firstAttribute="centerX" secondItem="I5q-x9-a7b" secondAttribute="centerX" id="i1Y-O5-VRl"/>
+                            <constraint firstItem="Elr-vC-Lig" firstAttribute="centerX" secondItem="6q9-nu-0mk" secondAttribute="centerX" id="iNF-xa-bTH"/>
                             <constraint firstItem="HVE-aH-EJ8" firstAttribute="centerX" secondItem="ZB7-jT-y53" secondAttribute="centerX" id="pmZ-ZJ-bwI"/>
                             <constraint firstItem="q80-2W-mhI" firstAttribute="leading" secondItem="Elr-vC-Lig" secondAttribute="leading" id="pxT-KZ-OhM"/>
                             <constraint firstItem="Elr-vC-Lig" firstAttribute="top" secondItem="6q9-nu-0mk" secondAttribute="bottom" constant="10" id="uNk-ug-nks"/>
@@ -128,7 +128,7 @@
                                         <rect key="frame" x="0.0" y="28" width="374" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Uok-sD-Xfe" id="mgt-t6-ctd">
-                                            <rect key="frame" x="0.0" y="0.0" width="374" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i1R-dE-inQ">
@@ -314,7 +314,7 @@
                                         <rect key="frame" x="0.0" y="28" width="374" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="zVF-1C-QKP" id="i9m-hy-4u6">
-                                            <rect key="frame" x="0.0" y="0.0" width="374" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="User" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qax-6E-1nX">
