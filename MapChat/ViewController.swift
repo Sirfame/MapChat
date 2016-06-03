@@ -287,7 +287,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         myQuery.observeEventType(.KeyExited, withBlock: { (key: String!, location: CLLocation!) in
             NSLog("removing from users array \(key)")
             NSLog("\(self.myQuery.radius)")
-            for i in 0 ..< self.usersInRange.count {
+            for i in 0 ..< self.usersInRange.count - 1{
                 let currKey = self.usersInRange[i]
                 if currKey == key {
                     self.usersInRange.removeAtIndex(i)
