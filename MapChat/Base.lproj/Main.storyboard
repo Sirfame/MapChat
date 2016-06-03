@@ -198,7 +198,7 @@
                                     <outlet property="delegate" destination="k2Z-lM-Trt" id="2ud-Xm-jSy"/>
                                 </connections>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Chat" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sVX-so-Uj7">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chat" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sVX-so-Uj7">
                                 <rect key="frame" x="189" y="109" width="37" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -210,10 +210,12 @@
                             <constraint firstItem="q9N-kA-uqf" firstAttribute="top" secondItem="HbM-Cz-tgw" secondAttribute="bottom" constant="22" id="0H7-ae-kTE"/>
                             <constraint firstItem="HbM-Cz-tgw" firstAttribute="centerY" secondItem="xqD-NE-LRe" secondAttribute="centerY" id="LtE-e0-Yes"/>
                             <constraint firstItem="HbM-Cz-tgw" firstAttribute="leading" secondItem="xqD-NE-LRe" secondAttribute="leadingMargin" id="WOc-wY-Z6H"/>
+                            <constraint firstItem="sVX-so-Uj7" firstAttribute="centerX" secondItem="xqD-NE-LRe" secondAttribute="centerX" id="Wle-Iv-tNw"/>
                             <constraint firstItem="HbM-Cz-tgw" firstAttribute="top" secondItem="Zib-7f-dEC" secondAttribute="bottom" constant="22" id="hgd-Gm-24O"/>
                             <constraint firstItem="q9N-kA-uqf" firstAttribute="top" secondItem="HbM-Cz-tgw" secondAttribute="bottom" constant="10" id="p45-8d-6cC"/>
                             <constraint firstItem="HbM-Cz-tgw" firstAttribute="centerX" secondItem="xqD-NE-LRe" secondAttribute="centerX" id="rII-Wg-4i8"/>
                             <constraint firstItem="HbM-Cz-tgw" firstAttribute="centerY" secondItem="xqD-NE-LRe" secondAttribute="centerY" id="wwy-Tq-zRc"/>
+                            <constraint firstItem="sVX-so-Uj7" firstAttribute="top" secondItem="Zib-7f-dEC" secondAttribute="bottom" constant="45" id="y34-rN-J32"/>
                             <constraint firstItem="HbM-Cz-tgw" firstAttribute="centerX" secondItem="xqD-NE-LRe" secondAttribute="centerX" id="z0S-p1-pPs"/>
                         </constraints>
                         <variation key="default">
